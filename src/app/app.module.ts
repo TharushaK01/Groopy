@@ -13,6 +13,8 @@ import {MatButtonModule} from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatCardModule} from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatButtonModule,
     MatMenuModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatCardModule,
+  
   ],
   providers: [
     provideAnimationsAsync()

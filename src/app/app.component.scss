@@ -14,7 +14,7 @@ body {
       width: auto;
     }
   
-    .search-bar {
+  /*  .search-bar {
       width: 1000px;  
       margin-left: 20px; 
       margin-top: 20px;
@@ -37,7 +37,7 @@ body {
         font-weight: bold; 
         font-size: 16px;  
       }
-    }
+    }*/
   
     .example-spacer {
       flex: 1 1 auto;
@@ -95,11 +95,123 @@ body {
     }
   }
   
-  .green-rectangle {
-    background-color: green; 
-    border-radius: 15px;
-    height: 50px; 
-    margin-top: 10px; 
-    width: 100%; 
-  }
+  .green-rectangle{
+  background-color: #4C99AA; 
+  border-radius: 10px;
+  height: 250px; 
+  margin: 10px auto; 
+  width: 95%;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; /* Stack elements vertically */
   
+
+  /* Media query for mobile view */
+  @media (max-width: 768px) {
+    height: 250px; 
+    margin: 5px auto; 
+    border-radius: 10px; 
+    width: 95%;
+  }
+}
+ .book {
+  font-family: 'Gabarito', sans-serif; 
+  font-weight: bold; 
+  text-align: center; 
+  margin: 20px auto; 
+  font-size: 2rem; 
+  color: white;
+  margin: 0; 
+
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    font-size: 1.5rem; 
+ 
+  }
+}
+.search-bar {
+  margin: 20px auto; /* Add space between the h3 and search bar */
+  width: 80%; /* Set the width of the search bar */
+  height: 70px;
+  background-color: white; /* Set the search bar background color to white */
+  padding: 0;
+  border-radius: 5px;
+  
+  /* Styling the mat-form-field */
+  mat-form-field {
+    width: 100%;
+    background-color: white; /* White background */
+    border-radius: 5px; /* Rounded corners */
+    display: flex;
+    align-items: center; /* Vertically center the input and button */
+    height: 40px; /* Set a fixed height for both input and background */
+    padding-right: 0; /* Ensure no extra padding on the right */
+  }
+
+  /* Style the input field */
+  input {
+    background-color: white; /* Ensure input background is white */
+    color: black; /* Set text color to black */
+    height: 40px; /* Make input field fill the height of the mat-form-field */
+    border: none; /* Remove any borders */
+    padding-left: 10px; /* Add some padding inside the input */
+  }
+
+  /* Style the search button */
+  button[mat-icon-button] {
+    background-color: #fff; /* White background for the button */
+    color: #4C99AA; /* Icon color */
+    border-radius: 4px;
+    margin-right: 5px; /* Add margin to prevent overlap with the search bar */
+  }
+
+  /* Media query for mobile view */
+  @media (max-width: 768px) {
+    width: 85%; /* Adjust width for mobile view */
+  }
+}
+
+.card {
+  display: flex; /* Align cards horizontally */
+  justify-content: center; /* Center the cards and make them closer */
+  align-items: center; /* Vertically align items */
+  flex-wrap: wrap; /* Allow cards to wrap if needed */
+  margin: 20px auto; /* Center the card container */
+  width: 100%; /* Full width container */
+  
+  mat-card {
+    width: 150px; /* Fixed width */
+    height: 150px; /* Fixed height for square shape */
+    display: flex; /* Flex to center content */
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Small shadow */
+    margin: 40px; /* Smaller margin to bring the cards closer */
+  }
+
+  mat-card-actions {
+    display: flex;
+    justify-content: center; /* Center the button inside the card */
+  }
+
+  button[mat-button] {
+    font-weight: bold;
+    font-size: 1.2rem; /* Increase font size for button text */
+    color: black;
+  }
+
+  /* Mobile view adjustments */
+  @media (max-width: 768px) {
+    justify-content: center; /* Keep cards centered in mobile view */
+    flex-wrap: nowrap; /* Prevent cards from wrapping in mobile view */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    
+    mat-card {
+      width: 120px; /* Adjust width for smaller screens */
+      height: 120px; /* Maintain square shape */
+      margin: 10px; /* Minimize margin for closer cards on mobile */
+    }
+  }
+}
