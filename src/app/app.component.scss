@@ -104,7 +104,7 @@ body {
   display: flex; 
   justify-content: center; 
   align-items: center; 
-  flex-direction: column; /* Stack elements vertically */
+  flex-direction: column; 
   
 
   /* Media query for mobile view */
@@ -131,87 +131,169 @@ body {
   }
 }
 .search-bar {
-  margin: 20px auto; /* Add space between the h3 and search bar */
-  width: 80%; /* Set the width of the search bar */
+  margin: 20px auto; 
+  width: 80%; 
   height: 70px;
-  background-color: white; /* Set the search bar background color to white */
+  background-color: white; 
   padding: 0;
   border-radius: 5px;
   
   /* Styling the mat-form-field */
   mat-form-field {
     width: 100%;
-    background-color: white; /* White background */
-    border-radius: 5px; /* Rounded corners */
+    background-color: white; 
+    border-radius: 5px; 
     display: flex;
-    align-items: center; /* Vertically center the input and button */
-    height: 40px; /* Set a fixed height for both input and background */
-    padding-right: 0; /* Ensure no extra padding on the right */
+    align-items: center; 
+    height: 40px; 
+    padding-right: 0; 
   }
 
   /* Style the input field */
   input {
-    background-color: white; /* Ensure input background is white */
-    color: black; /* Set text color to black */
-    height: 40px; /* Make input field fill the height of the mat-form-field */
-    border: none; /* Remove any borders */
-    padding-left: 10px; /* Add some padding inside the input */
+    background-color: white; 
+    color: black; 
+    height: 40px; 
+    border: none; 
+    padding-left: 10px; 
   }
 
   /* Style the search button */
   button[mat-icon-button] {
-    background-color: #fff; /* White background for the button */
-    color: #4C99AA; /* Icon color */
+    background-color: #fff;
+    color: #4C99AA; 
     border-radius: 4px;
-    margin-right: 5px; /* Add margin to prevent overlap with the search bar */
+    margin-right: 5px; 
   }
 
   /* Media query for mobile view */
   @media (max-width: 768px) {
-    width: 85%; /* Adjust width for mobile view */
+    width: 85%; 
   }
 }
 
 .card {
-  display: flex; /* Align cards horizontally */
-  justify-content: center; /* Center the cards and make them closer */
-  align-items: center; /* Vertically align items */
-  flex-wrap: wrap; /* Allow cards to wrap if needed */
-  margin: 20px auto; /* Center the card container */
-  width: 100%; /* Full width container */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  margin: 20px auto; 
+  width: 100%; 
   
   mat-card {
-    width: 150px; /* Fixed width */
-    height: 150px; /* Fixed height for square shape */
-    display: flex; /* Flex to center content */
+    width: 150px; 
+    height: 150px; 
+    display: flex; 
     justify-content: center;
     align-items: center;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Small shadow */
-    margin: 40px; /* Smaller margin to bring the cards closer */
+    border-radius: 10px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    margin: 40px; 
   }
 
   mat-card-actions {
     display: flex;
-    justify-content: center; /* Center the button inside the card */
+    justify-content: center; 
   }
 
   button[mat-button] {
     font-weight: bold;
-    font-size: 1.2rem; /* Increase font size for button text */
+    font-size: 1.2rem; 
     color: black;
   }
 
   /* Mobile view adjustments */
   @media (max-width: 768px) {
-    justify-content: center; /* Keep cards centered in mobile view */
-    flex-wrap: nowrap; /* Prevent cards from wrapping in mobile view */
-    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    justify-content: center; 
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
     
     mat-card {
-      width: 120px; /* Adjust width for smaller screens */
-      height: 120px; /* Maintain square shape */
-      margin: 10px; /* Minimize margin for closer cards on mobile */
+      width: 120px; 
+      height: 120px; 
+      margin: 10px; 
+    }
+  }
+}
+
+
+.blue-rectangle {
+  background-color: #4C99AA; 
+  width: 100%;
+  height: 50px;
+  margin: 30px auto;
+  border-radius: 8px;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center; 
+  padding-left: 10px; 
+}
+
+h3 {
+  font-family: 'Gabarito', sans-serif; 
+  font-weight: bold; 
+  text-align: center; 
+  margin: 25px auto;
+  font-size: 1.5rem; 
+  color: black;
+  margin: 10px; 
+
+   /* Media query for responsiveness */
+   @media (max-width: 768px) {
+    font-size: 1.5rem; 
+ 
+  }
+}
+
+@media (max-width: 768px) {
+  .blue-rectangle {
+    width: 95%; 
+    height: 5%; 
+  }
+}
+
+.card_2 {
+  display: flex;
+  justify-content: space-between; /* Space between cards */
+  align-items: center;
+  flex-wrap: wrap; /* Cards can wrap when needed */
+  margin: 20px auto;
+  width: 100%;
+
+  mat-card {
+    width: 30%; /* 3 cards per row */
+    height: 150px; /* Set height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #F2F2F2;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+  }
+
+  mat-card-actions {
+    display: flex;
+    justify-content: center;
+  }
+
+  button[mat-button] {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: black;
+  }
+
+  
+  /* Mobile view adjustments */
+  @media (max-width: 768px) {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    mat-card {
+      flex: 0 0 auto;
+      width: 90%;
+      margin: 10px;
     }
   }
 }
