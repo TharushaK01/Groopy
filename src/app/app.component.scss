@@ -254,15 +254,14 @@ h3 {
 
 .card_2 {
   display: flex;
-  justify-content: space-between; /* Space between cards */
+  justify-content: space-between; 
   align-items: center;
-  flex-wrap: wrap; /* Cards can wrap when needed */
-  margin: 20px auto;
+  flex-wrap: wrap; 
   width: 100%;
 
   mat-card {
-    width: 30%; /* 3 cards per row */
-    height: 150px; /* Set height */
+    width: 30%; 
+    height: 150px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -297,3 +296,78 @@ h3 {
     }
   }
 }
+
+.footer {
+  background-color: #4C99AA;
+  height: 400px; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 20px;
+  position: relative;
+  
+  .footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px; 
+    border-top: 1px solid white;
+  }
+
+  .footer-logo {
+    img {
+      height: 50px; 
+      opacity: 0.6;
+    }
+  }
+
+  .footer-text {
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    flex-grow: 1; 
+    padding-left: 80px;
+    opacity: 0.6;
+  }
+
+  .footer-icons {
+    display: flex;
+    gap: 15px;
+    opacity: 0.6;
+
+    a {
+      img {
+        height: 20px; /* Adjust size of icons */
+        filter: brightness(0) invert(1); /* Make icons white */
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer-logo {
+      margin-bottom: 10px;
+    }
+
+    .footer-text {
+      margin: 10px 0;
+    }
+
+    .footer-icons {
+      margin-top: 10px;
+    }
+  }
+}
+
