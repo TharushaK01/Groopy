@@ -1,2 +1,5 @@
 # Groopy
-![Still_Developing](https://github.com/user-attachments/assets/f0522589-bf67-4df7-93fb-c91f9a4ccd7b)
+## still developing
+## 🔗 Live Demo
+https://github.com/user-attachments/assets/e9318650-63e2-4fb1-a371-57608c9dced8
+
