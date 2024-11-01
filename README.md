@@ -1,4 +1,4 @@
 # Groopy
 ## 🔗 Live Demo (Still Developing)
-https://github.com/user-attachments/assets/e9318650-63e2-4fb1-a371-57608c9dced8
+https://github.com/user-attachments/assets/7d134e46-067f-4b63-916c-78a26c80bfc8
 
