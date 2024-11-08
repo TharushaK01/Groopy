@@ -14,12 +14,16 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms'; 
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,7 @@ import {MatCardModule} from '@angular/material/card';
     MatInputModule,
     MatFormFieldModule,
     MatCardModule,
-  
+    FormsModule,
   ],
   providers: [
     provideAnimationsAsync()

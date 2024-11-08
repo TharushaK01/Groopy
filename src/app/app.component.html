@@ -1,205 +1,186 @@
-<mat-toolbar class="custom-toolbar" color="primary">
-  <!-- Logo on the left side -->
-  <span>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary custom-toolbar">
+  <a class="navbar-brand" href="#">
     <img src="logo.png" alt="Groopy Logo" class="logo">
-  </span>
-<!--
-  <!-- Search bar in the middle 
-  <mat-form-field class="search-bar" appearance="outline">
-    <mat-label>Search</mat-label>
-    <input matInput placeholder="Search">
-    <button mat-icon-button matSuffix>
-      <mat-icon>search</mat-icon> <!-- Search button 
-    </button>
-  </mat-form-field>-->
-
-  <!-- Spacer to push the buttons to the right -->
-  <span class="example-spacer"></span>
-
-  <!-- Hamburger button for mobile view -->
-  <button mat-icon-button [matMenuTriggerFor]="menu" class="hamburger-button">
-    <mat-icon>menu</mat-icon>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
   </button>
-
-  <!-- Regular buttons for desktop view -->
-  <div class="toolbar-buttons">
-    <a mat-button>Dashboard</a>
-    <a mat-button>Save More</a>
-    <a mat-button>Help & Support</a>
-    <a mat-button>Sign In</a>
-    <button mat-flat-button>Login</button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav d-flex justify-content-end w-100"> 
+      <li class="nav-item">
+        <a class="nav-link" href="#">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Save More</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Help & Support</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Sign In</a>
+      </li>
+      <li class="nav-item">
+        <button class="btn btn-light">Login</button>
+      </li>
+    </ul>
   </div>
-
-  <!-- Hamburger Menu content (for mobile view) -->
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>Dashboard</button>
-    <button mat-menu-item>Save More</button>
-    <button mat-menu-item>Help & Support</button>
-    <button mat-menu-item>Sign In</button>
-    <button mat-menu-item>Login</button>
-  </mat-menu>
-</mat-toolbar>
+</nav>
 
 
-<div class="green-rectangle">
-  <h3 class="book">Book Anything As a Group</h3>
+<div class="green-rectangle p-3">
+  <h3 class="text-center book">Book Anything As a Group</h3>
+  <div class="d-flex justify-content-center">
+  <div class="input-group mb-3" style="max-width: 300px;">
+    <input type="text" class="form-control" placeholder="Enter your search" aria-label="Search">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button">
+        <i class="bi bi-search">Search</i>
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="d-flex flex-row mb-3 justify-content-center">
+  <div class="card mb-2" style="width: 250px; height: 250px; margin-right: 15px;">
+    <div class="card-body">
+      <button class="btn btn-primary" style="width: 215px; height: 215px;">Wedding</button>
+    </div>
+  </div>
+  <div class="card mb-2" style="width: 250px; height: 250px; margin-right: 15px;">
+    <div class="card-body">
+      <button class="btn btn-primary" style="width: 215px; height: 215px;">Trip</button>
+    </div>
+  </div>
+  <div class="card mb-2" style="width: 250px; height: 250px; margin-right: 15px;">
+    <div class="card-body">
+      <button class="btn btn-primary" style="width: 215px; height: 215px;">Music</button>
+    </div>
+  </div>
+</div>
+
+<div class="p-3">
+  <h3 class="Wedding text-center">Wedding</h3>
+</div>
+
+<div class="mb-2">
+    <div class="d-flex flex-row mb-2 justify-content-center" >
+      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
+      <div class="card-body">
+        <button class="btn btn-primary" style="width: 215px; height: 215px;">Hotels</button>
+      </div>
+    </div>
+    <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
+      <div class="card-body">
+        <button class="btn btn-primary" style="width: 215px; height: 215px;">Food</button>
+      </div>
+    </div>
+    <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
+      <div class="card-body">
+        <button class="btn btn-primary" style="width: 215px; height: 215px;">Drinks</button>
+      </div>
+    </div>
+    </div>
     
-  <!-- Search Bar -->
-  <mat-form-field class="search-bar" appearance="outline">
-    <mat-label>Search</mat-label>
-    <input matInput placeholder="Enter your search">
-    <button mat-icon-button matSuffix>
-      <mat-icon>search</mat-icon> <!-- Search button -->
-    </button>
-  </mat-form-field>
-</div>
-
-
-<div class="card">
-  <mat-card appearance="outlined">
-    <mat-card-actions>
-      <button mat-button>Wedding</button>
-    </mat-card-actions>
-  </mat-card>
-  <mat-card appearance="outlined">
-    <mat-card-actions>
-      <button mat-button>Trip</button>
-    </mat-card-actions>
-  </mat-card>
-  <mat-card appearance="outlined">
-    <mat-card-actions>
-      <button mat-button>Music</button>
-    </mat-card-actions>
-  </mat-card>
-</div>
-
-<div class="blue-rectangle">
-  <h3 class="Wedding">Wedding</h3>
-</div>
-
-
-<div class="card_2">
-  <mat-card appearance="outlined">
-    <mat-card-actions>
-      <button mat-button>Hotels</button>
-    </mat-card-actions>
-  </mat-card>
-  <mat-card appearance="outlined">
-    <mat-card-actions>
-      <button mat-button>Food</button>
-    </mat-card-actions>
-  </mat-card>
-  <mat-card appearance="outlined">
-    <mat-card-actions>
-      <button mat-button>Drinks</button>
-    </mat-card-actions>
-  </mat-card>
-  <mat-card appearance="outlined">
-    <mat-card-actions>
-      <button mat-button>Vehicles</button>
-    </mat-card-actions>
-  </mat-card>
-  <mat-card appearance="outlined">
-    <mat-card-actions>
-      <button mat-button>Photographers</button>
-    </mat-card-actions>
-  </mat-card>
-  <mat-card appearance="outlined">
-    <mat-card-actions>
-      <button mat-button>Deco</button>
-    </mat-card-actions>
-  </mat-card>
-</div>
-
-<div class="blue-rectangle">
-  <h3 class="Wedding">Trip</h3>
-</div>
-
-
-<div class="card_2">
-  <mat-card appearance="outlined">
-    <mat-card-actions>
-      <button mat-button>Locations</button>
-    </mat-card-actions>
-  </mat-card>
-  <mat-card appearance="outlined">
-    <mat-card-actions>
-      <button mat-button>Food</button>
-    </mat-card-actions>
-  </mat-card>
-  <mat-card appearance="outlined">
-    <mat-card-actions>
-      <button mat-button>Drinks</button>
-    </mat-card-actions>
-  </mat-card>
-  <mat-card appearance="outlined">
-    <mat-card-actions>
-      <button mat-button>Vehicles</button>
-    </mat-card-actions>
-  </mat-card>
-  <mat-card appearance="outlined">
-    <mat-card-actions>
-      <button mat-button>Guide</button>
-    </mat-card-actions>
-  </mat-card>
-  <mat-card appearance="outlined">
-    <mat-card-actions>
-      <button mat-button>Air Tickets</button>
-    </mat-card-actions>
-  </mat-card>
-</div>
-
-<div class="blue-rectangle">
-  <h3 class="Wedding">Music</h3>
-</div>
-
-
-<div class="card_2">
-  <mat-card appearance="outlined">
-    <mat-card-actions>
-      <button mat-button>Locations</button>
-    </mat-card-actions>
-  </mat-card>
-  <mat-card appearance="outlined">
-    <mat-card-actions>
-      <button mat-button>Food</button>
-    </mat-card-actions>
-  </mat-card>
-  <mat-card appearance="outlined">
-    <mat-card-actions>
-      <button mat-button>Drinks</button>
-    </mat-card-actions>
-  </mat-card>
-  <mat-card appearance="outlined">
-    <mat-card-actions>
-      <button mat-button>Vehicles</button>
-    </mat-card-actions>
-  </mat-card>
-  <mat-card appearance="outlined">
-    <mat-card-actions>
-      <button mat-button>Sounds</button>
-    </mat-card-actions>
-  </mat-card>
-  <mat-card appearance="outlined">
-    <mat-card-actions>
-      <button mat-button>Artists</button>
-    </mat-card-actions>
-  </mat-card>
-</div>
-
-<footer class="footer">
-  <div class="footer-content">
-    <div class="footer-logo">
-      <img src="logo.png" alt="Logo" />
+  <div class="d-flex flex-row mb-2 justify-content-center">
+    <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
+      <div class="card-body">
+        <button class="btn btn-primary" style="width: 215px; height: 215px;">Vehicles</button>
+      </div>
     </div>
-    <div class="footer-text">
-      <p>All right reserved at TKA Products 2024</p>
+    <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
+      <div class="card-body">
+        <button class="btn btn-primary" style="width: 215px; height: 215px;">Photographers</button>
+      </div>
     </div>
-    <div class="footer-icons">
-      <a href="#"><img src="fb.png" alt="Facebook" /></a>
-      <a href="#"><img src="ins.png" alt="YouTube" /></a>
-      <a href="#"><img src="yt.png" alt="Instagram" /></a>
-      <a href="#"><img src="Ln.png" alt="LinkedIn" /></a>
+    <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
+      <div class="card-body">
+        <button class="btn btn-primary" style="width: 215px; height: 215px;">Decoration</button>
+      </div>
     </div>
   </div>
-</footer>
+  </div>
+
+  <div class="p-3">
+    <h3 class="Trip text-center">Trip</h3>
+  </div>
+  
+  <div class="mb-2">
+      <div class="d-flex flex-row mb-2 justify-content-center" >
+        <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
+        <div class="card-body">
+          <button class="btn btn-primary" style="width: 215px; height: 215px;">Locations</button>
+        </div>
+      </div>
+      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
+        <div class="card-body">
+          <button class="btn btn-primary" style="width: 215px; height: 215px;">Food</button>
+        </div>
+      </div>
+      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
+        <div class="card-body">
+          <button class="btn btn-primary" style="width: 215px; height: 215px;">Drinks</button>
+        </div>
+      </div>
+      </div>
+      
+    <div class="d-flex flex-row mb-2 justify-content-center">
+      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
+        <div class="card-body">
+          <button class="btn btn-primary" style="width: 215px; height: 215px;">Vehicles</button>
+        </div>
+      </div>
+      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
+        <div class="card-body">
+          <button class="btn btn-primary" style="width: 215px; height: 215px;">Guide</button>
+        </div>
+      </div>
+      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
+        <div class="card-body">
+          <button class="btn btn-primary" style="width: 215px; height: 215px;">Air Tickets</button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="p-3">
+      <h3 class="Music text-center">Music</h3>
+    </div>
+    
+    <div class="mb-2">
+        <div class="d-flex flex-row mb-2 justify-content-center" >
+          <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
+          <div class="card-body">
+            <button class="btn btn-primary" style="width: 215px; height: 215px;">Locations</button>
+          </div>
+        </div>
+        <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
+          <div class="card-body">
+            <button class="btn btn-primary" style="width: 215px; height: 215px;">Food</button>
+          </div>
+        </div>
+        <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
+          <div class="card-body">
+            <button class="btn btn-primary" style="width: 215px; height: 215px;">Drinks</button>
+          </div>
+        </div>
+        </div>
+        
+      <div class="d-flex flex-row mb-2 justify-content-center">
+        <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
+          <div class="card-body">
+            <button class="btn btn-primary" style="width: 215px; height: 215px;">Vehicles</button>
+          </div>
+        </div>
+        <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
+          <div class="card-body">
+            <button class="btn btn-primary" style="width: 215px; height: 215px;">Sound</button>
+          </div>
+        </div>
+        <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
+          <div class="card-body">
+            <button class="btn btn-primary" style="width: 215px; height: 215px;">Artists</button>
+          </div>
+        </div>
+      </div>
+      </div>
