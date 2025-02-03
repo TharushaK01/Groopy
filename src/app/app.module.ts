@@ -15,7 +15,12 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { WeddingComponent } from './wedding/wedding.component';
+import { TripComponent } from './trip/trip.component';
+import { MusicComponent } from './music/music.component';
+import { FooterComponent } from './footer/footer.component'; 
 
 
 
@@ -23,7 +28,12 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     NavbarComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent,
+    WeddingComponent,
+    TripComponent,
+    MusicComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
