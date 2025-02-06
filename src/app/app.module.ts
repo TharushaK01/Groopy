@@ -20,7 +20,8 @@ import { HomeComponent } from './home/home.component';
 import { WeddingComponent } from './wedding/wedding.component';
 import { TripComponent } from './trip/trip.component';
 import { MusicComponent } from './music/music.component';
-import { FooterComponent } from './footer/footer.component'; 
+import { FooterComponent } from './footer/footer.component';
+import { ChatComponent } from './chat/chat.component'; 
 
 
 
@@ -33,7 +34,8 @@ import { FooterComponent } from './footer/footer.component';
     WeddingComponent,
     TripComponent,
     MusicComponent,
-    FooterComponent
+    FooterComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
