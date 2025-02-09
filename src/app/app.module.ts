@@ -21,7 +21,9 @@ import { WeddingComponent } from './wedding/wedding.component';
 import { TripComponent } from './trip/trip.component';
 import { MusicComponent } from './music/music.component';
 import { FooterComponent } from './footer/footer.component';
-import { ChatComponent } from './chat/chat.component'; 
+import { HotelsComponent } from './hotels/hotels.component';
+import { FoodComponent } from './food/food.component';
+// import { ChatComponent } from './chat/chat.component'; 
 
 
 
@@ -35,7 +37,9 @@ import { ChatComponent } from './chat/chat.component';
     TripComponent,
     MusicComponent,
     FooterComponent,
-    ChatComponent
+    HotelsComponent,
+    FoodComponent,
+    // ChatComponent
   ],
   imports: [
     BrowserModule,

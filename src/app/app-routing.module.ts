@@ -5,6 +5,8 @@ import { HomeComponent } from './home/home.component';
 import { WeddingComponent } from './wedding/wedding.component';
 import { TripComponent } from './trip/trip.component';
 import { MusicComponent } from './music/music.component';
+import { HotelsComponent } from './hotels/hotels.component';
+import { FoodComponent } from './food/food.component';
 
 
 
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path: 'wedding', component: WeddingComponent},
   { path: 'trip', component: TripComponent},
   { path: 'music', component: MusicComponent},
+  { path: 'hotels', component: HotelsComponent},
+  { path: 'food', component: FoodComponent},
 
 
 ];
