@@ -20,7 +20,10 @@ import { HomeComponent } from './home/home.component';
 import { WeddingComponent } from './wedding/wedding.component';
 import { TripComponent } from './trip/trip.component';
 import { MusicComponent } from './music/music.component';
-import { FooterComponent } from './footer/footer.component'; 
+import { FooterComponent } from './footer/footer.component';
+import { HotelsComponent } from './hotels/hotels.component';
+import { FoodComponent } from './food/food.component';
+// import { ChatComponent } from './chat/chat.component'; 
 
 
 
@@ -33,7 +36,10 @@ import { FooterComponent } from './footer/footer.component';
     WeddingComponent,
     TripComponent,
     MusicComponent,
-    FooterComponent
+    FooterComponent,
+    HotelsComponent,
+    FoodComponent,
+    // ChatComponent
   ],
   imports: [
     BrowserModule,
