@@ -7,6 +7,8 @@ import { TripComponent } from './trip/trip.component';
 import { MusicComponent } from './music/music.component';
 import { HotelsComponent } from './hotels/hotels.component';
 import { FoodComponent } from './food/food.component';
+import { DrinksComponent } from './drinks/drinks.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
 
 
 
@@ -18,6 +20,8 @@ const routes: Routes = [
   { path: 'music', component: MusicComponent},
   { path: 'hotels', component: HotelsComponent},
   { path: 'food', component: FoodComponent},
+  { path: 'drinks', component: DrinksComponent},
+  { path: 'vehicles', component: VehiclesComponent},
 
 
 ];

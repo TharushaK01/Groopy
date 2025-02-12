@@ -23,6 +23,8 @@ import { MusicComponent } from './music/music.component';
 import { FooterComponent } from './footer/footer.component';
 import { HotelsComponent } from './hotels/hotels.component';
 import { FoodComponent } from './food/food.component';
+import { DrinksComponent } from './drinks/drinks.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
 // import { ChatComponent } from './chat/chat.component'; 
 
 
@@ -39,6 +41,8 @@ import { FoodComponent } from './food/food.component';
     FooterComponent,
     HotelsComponent,
     FoodComponent,
+    DrinksComponent,
+    VehiclesComponent,
     // ChatComponent
   ],
   imports: [
