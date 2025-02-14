@@ -25,6 +25,7 @@ import { HotelsComponent } from './hotels/hotels.component';
 import { FoodComponent } from './food/food.component';
 import { DrinksComponent } from './drinks/drinks.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
+import { PhotographersComponent } from './photographers/photographers.component';
 // import { ChatComponent } from './chat/chat.component'; 
 
 
@@ -43,6 +44,7 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
     FoodComponent,
     DrinksComponent,
     VehiclesComponent,
+    PhotographersComponent,
     // ChatComponent
   ],
   imports: [
