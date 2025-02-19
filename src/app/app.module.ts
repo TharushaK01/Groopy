@@ -26,6 +26,7 @@ import { FoodComponent } from './food/food.component';
 import { DrinksComponent } from './drinks/drinks.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { PhotographersComponent } from './photographers/photographers.component';
+import { DecorationComponent } from './decoration/decoration.component';
 // import { ChatComponent } from './chat/chat.component'; 
 
 
@@ -45,6 +46,7 @@ import { PhotographersComponent } from './photographers/photographers.component'
     DrinksComponent,
     VehiclesComponent,
     PhotographersComponent,
+    DecorationComponent,
     // ChatComponent
   ],
   imports: [

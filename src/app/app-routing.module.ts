@@ -10,6 +10,7 @@ import { FoodComponent } from './food/food.component';
 import { DrinksComponent } from './drinks/drinks.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { PhotographersComponent } from './photographers/photographers.component';
+import { DecorationComponent } from './decoration/decoration.component';
 
 
 
@@ -24,6 +25,9 @@ const routes: Routes = [
   { path: 'drinks', component: DrinksComponent},
   { path: 'vehicles', component: VehiclesComponent},
   { path: 'photographers', component: PhotographersComponent},
+  { path: 'decoration', component: DecorationComponent},
+  
+
 
 
 ];
