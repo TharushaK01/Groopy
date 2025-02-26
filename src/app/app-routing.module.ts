@@ -15,6 +15,8 @@ import { LocationComponent } from './location/location.component';
 import { GuideComponent } from './guide/guide.component';
 import { AirticketsComponent } from './airtickets/airtickets.component';
 import { VenuesComponent } from './venues/venues.component';
+import { SoundComponent } from './sound/sound.component';
+import { ArtistComponent } from './artist/artist.component';
 
 
 
@@ -34,6 +36,8 @@ const routes: Routes = [
   { path: 'guide', component: GuideComponent},
   { path: 'airtickets', component: AirticketsComponent},
   { path: 'venues', component: VenuesComponent},
+  { path: 'sound', component: SoundComponent},
+  { path: 'artist', component: ArtistComponent},
 
 
 

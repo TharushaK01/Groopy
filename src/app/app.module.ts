@@ -31,6 +31,8 @@ import { LocationComponent } from './location/location.component';
 import { GuideComponent } from './guide/guide.component';
 import { AirticketsComponent } from './airtickets/airtickets.component';
 import { VenuesComponent } from './venues/venues.component';
+import { SoundComponent } from './sound/sound.component';
+import { ArtistComponent } from './artist/artist.component';
 // import { ChatComponent } from './chat/chat.component'; 
 
 
@@ -55,6 +57,8 @@ import { VenuesComponent } from './venues/venues.component';
     GuideComponent,
     AirticketsComponent,
     VenuesComponent,
+    SoundComponent,
+    ArtistComponent,
     // ChatComponent
   ],
   imports: [
