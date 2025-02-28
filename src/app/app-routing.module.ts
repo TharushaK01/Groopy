@@ -17,10 +17,13 @@ import { AirticketsComponent } from './airtickets/airtickets.component';
 import { VenuesComponent } from './venues/venues.component';
 import { SoundComponent } from './sound/sound.component';
 import { ArtistComponent } from './artist/artist.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 
 const routes: Routes = [
+  { path: 'signup', component: SignupComponent}, 
+  { path: 'login', component: LoginComponent}, 
   { path: 'home', component: HomeComponent}, 
   { path: '', redirectTo: '/home', pathMatch: 'full' }, 
   { path: 'wedding', component: WeddingComponent},
