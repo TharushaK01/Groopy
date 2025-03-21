@@ -18,6 +18,7 @@ import { VenuesComponent } from './venues/venues.component';
 import { SoundComponent } from './sound/sound.component';
 import { ArtistComponent } from './artist/artist.component';
 import { SignupComponent } from './signup/signup.component';
+import { ChatComponent } from './chat/chat.component';
 
 
 
@@ -41,6 +42,7 @@ const routes: Routes = [
   { path: 'venues', component: VenuesComponent},
   { path: 'sound', component: SoundComponent},
   { path: 'artist', component: ArtistComponent},
+  { path: 'chat', component: ChatComponent},
 
 
 
