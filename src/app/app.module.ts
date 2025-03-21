@@ -35,7 +35,9 @@ import { SoundComponent } from './sound/sound.component';
 import { ArtistComponent } from './artist/artist.component';
 import { LayoutComponent } from './layout/layout.component';
 import { SignupComponent } from './signup/signup.component';
-// import { ChatComponent } from './chat/chat.component'; 
+import { ChatComponent } from './chat/chat.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 
 
@@ -63,7 +65,7 @@ import { SignupComponent } from './signup/signup.component';
     ArtistComponent,
     LayoutComponent,
     SignupComponent,
-    // ChatComponent
+    ChatComponent,
   ],
   imports: [
     BrowserModule,
@@ -77,6 +79,8 @@ import { SignupComponent } from './signup/signup.component';
     MatFormFieldModule,
     MatCardModule,
     FormsModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule,
   ],
   providers: [
     provideAnimationsAsync()
