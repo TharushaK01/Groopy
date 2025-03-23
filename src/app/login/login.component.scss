@@ -1,40 +1,26 @@
-.login-container {
-    width: 300px;
-    margin: 100px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    text-align: center;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  button {
-    width: 100%;
-    padding: 10px;
-    background-color: #1249fd;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #1249fd;
-  }
-  
+.container{
+  margin-left: 30px;
+  display: block;
+  margin: auto;
+  background: #eceff1;
+  padding: 70px;
+  border-radius: 16px;
+  max-width: 400px;
+}
+.container mat-form-field {
+  width: 100%;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+.margin-top {
+  margin-top: 16px;
+}
+.text-center {
+  text-align: center;
+}
+.sign-up-link {
+  font-size: 1.2rem;
+  margin-top: 8px;
+}

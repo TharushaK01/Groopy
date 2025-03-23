@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Groopy:build:production"
+              "buildTarget": "groopy:build:production"
             },
             "development": {
-              "buildTarget": "Groopy:build:development"
+              "buildTarget": "groopy:build:development"
             }
           },
           "defaultConfiguration": "development"
