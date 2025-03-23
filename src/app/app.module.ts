@@ -38,6 +38,8 @@ import { SignupComponent } from './signup/signup.component';
 import { ChatComponent } from './chat/chat.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getAuth, provideAuth } from '@angular/fire/auth';
 
 
 
@@ -81,9 +83,13 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     FormsModule,
     ReactiveFormsModule,
     MatAutocompleteModule,
+ 
+
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideFirebaseApp(() => initializeApp({"projectId":"groopy-db888","appId":"1:121507118517:web:6bfac9ff72bb46a92eadfc","storageBucket":"groopy-db888.firebasestorage.app","apiKey":"AIzaSyDPBbJbwKy5Oo0iWV-SrYeDCqNaBB0ckfo","authDomain":"groopy-db888.firebaseapp.com","messagingSenderId":"121507118517"})),
+    provideAuth(() => getAuth())
   ],
   bootstrap: [AppComponent]
 })
