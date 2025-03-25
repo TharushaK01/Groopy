@@ -10,9 +10,9 @@
             <input matInput placeholder="Password" formControlName="password" type="password"/>
             <mat-error *ngIf="password?.errors?.['required']"> Password is required </mat-error>
         </mat-form-field>
-        <div class="center margin-top">
-        <button mat-raised-button color="parimary" type="submit"> Login</button>
+        <div class="center margin-top"> 
+        <button  mat-raised-button color="parimary" type="submit"> Login</button>
         </div>
-        <span class="center margin-top">New to our platform?<a class="sign-up-link" routerLink="signup">Sin Up!</a></span>
+        <span class="center margin-top">New to our platform?<a class="sign-up-link" routerLink="/signup">Sin Up!</a></span>
     </form>
 </div>

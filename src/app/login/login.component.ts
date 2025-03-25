@@ -30,7 +30,13 @@ get password() {
   }
 
   const { email, password } = this.loginform.value;
-  this.authService.login(email as string, password as string).subscribe(() => {
+  this.authService.login(email as string, password as string).pipe(
+    this.toast.observe({
+      success: 'Logged in successfully',
+      loading: 'Logging in...',
+      error: 'There was an error'
+    })
+  ) .subscribe(() => {
     this.router.navigate(['/home']);
   });
  }
