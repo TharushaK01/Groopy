@@ -26,7 +26,7 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent}, 
   { path: 'login', component: LoginComponent}, 
   { path: 'home', component: HomeComponent}, 
-  { path: '', redirectTo: '/home', pathMatch: 'full' }, 
+  { path: '', redirectTo: '/login', pathMatch: 'full' }, 
   { path: 'wedding', component: WeddingComponent},
   { path: 'trip', component: TripComponent},
   { path: 'music', component: MusicComponent},
