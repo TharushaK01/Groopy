@@ -43,6 +43,8 @@ import { getAuth, provideAuth } from '@angular/fire/auth';
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,6 +85,7 @@ import { getAuth, provideAuth } from '@angular/fire/auth';
     FormsModule,
     ReactiveFormsModule,
     MatAutocompleteModule,
+
  
 
   ],

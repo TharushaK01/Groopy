@@ -1,6 +1,6 @@
 <div class="container mat-elevation-z5">
     <h1  style="text-align: center;">Login</h1>
-    <form [formGroup]="loginform">
+    <form [formGroup]="loginform" (ngSubmit)="submit()">
         <mat-form-field>
             <input matInput placeholder="Email address" formControlName="email"/>
             <mat-error *ngIf="email?.errors?.['required']"> Email is required </mat-error>
