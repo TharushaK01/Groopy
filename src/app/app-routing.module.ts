@@ -19,13 +19,21 @@ import { SoundComponent } from './sound/sound.component';
 import { ArtistComponent } from './artist/artist.component';
 import { SignupComponent } from './signup/signup.component';
 import { ChatComponent } from './chat/chat.component';
+import { canActivate, redirectUnauthorizedTo, redirectLoggedInTo } from '@angular/fire/auth-guard';
 
-
+const redirectToLogin = () => redirectUnauthorizedTo(['login']);
+const redirectToHome = () => redirectLoggedInTo(['home']);
 
 const routes: Routes = [
-  { path: 'signup', component: SignupComponent}, 
-  { path: 'login', component: LoginComponent}, 
-  { path: 'home', component: HomeComponent}, 
+  { path: 'signup', component: SignupComponent,
+    ...canActivate(redirectToHome)
+  }, 
+  { path: 'login', component: LoginComponent,
+    ...canActivate(redirectToHome)
+  }, 
+  { path: 'home', component: HomeComponent,
+    ...canActivate(redirectToLogin)
+  }, 
   { path: '', redirectTo: '/login', pathMatch: 'full' }, 
   { path: 'wedding', component: WeddingComponent},
   { path: 'trip', component: TripComponent},

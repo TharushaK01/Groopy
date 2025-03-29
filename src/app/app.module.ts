@@ -85,9 +85,7 @@ import { getAuth, provideAuth } from '@angular/fire/auth';
     FormsModule,
     ReactiveFormsModule,
     MatAutocompleteModule,
-
- 
-
+    MatMenuModule,
   ],
   providers: [
     provideAnimationsAsync(),
