@@ -4,6 +4,9 @@ import { AuthenticationService } from '../services/authentication.service';
 import { HotToastService } from '@ngneat/hot-toast';
 import { Router } from '@angular/router';
 import { from } from 'rxjs';
+import { Observable, OperatorFunction } from 'rxjs';
+import { pipe } from 'rxjs';
+import { tap } from 'rxjs/operators';
 
 export function passwordsMatchValidator(): ValidatorFn {
   return ( control: AbstractControl): ValidationErrors | null => {
@@ -56,7 +59,7 @@ export class SignupComponent implements OnInit{
     if (!this.signUpForm.valid) return;
 
     const { name, email, password } =  this.signUpForm.value;
-    from(this.authService.signUp(name as string, email as string, password as string)).pipe(
+    this.authService.signUp(name as string, email as string, password as string).pipe(
       this.toast.observe({
         success: 'Congrats! You are all signed up',
         loading: 'Signing in',
@@ -64,43 +67,6 @@ export class SignupComponent implements OnInit{
       })
     ).subscribe(()=> {
       this.router.navigate(['/home']);
-    }) error: (err) =>{
-      console.error('Singup error', err);
-      }
-
-
-
-
-    // this.authService.signUp(name as string, email as string, password as string)
-    // .subscribe({
-    //   next: () => {
-    //     this.toast.success('Congrats! You are all signed up');
-    //     this.router.navigate(['/home']);
-    //   },
-    //   error: (err) => {
-    //     this.toast.error(err.message || 'Signup failed');
-    //   }
-    // });
-
-
-
-
-
-    // // this.authService.signUp(name as string, email as string, password as string).pipe(
-    //   this.toast.observe({
-    //     operation: this.authService.signUp(
-    //       name as string, 
-    //       email as string, 
-    //       password as string
-    //     ),
-    //     success: 'Congrats! You are all singed up',
-    //     loading: 'Signing in',
-    //     error: ({message}) => `${message}`
-    //   }).subscribe(()=> {
-    //   this.router.navigate(['/home']);
-    // });
-    // // error: (err) =>{
-    // //   console.error('Singup error', err);
-    // // }
+    })
   }
 }
