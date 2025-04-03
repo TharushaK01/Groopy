@@ -40,6 +40,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -70,6 +71,7 @@ import { getAuth, provideAuth } from '@angular/fire/auth';
     LayoutComponent,
     SignupComponent,
     ChatComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -86,6 +88,7 @@ import { getAuth, provideAuth } from '@angular/fire/auth';
     ReactiveFormsModule,
     MatAutocompleteModule,
     MatMenuModule,
+   
   ],
   providers: [
     provideAnimationsAsync(),
