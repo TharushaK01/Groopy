@@ -19,7 +19,7 @@ import { SoundComponent } from './sound/sound.component';
 import { ArtistComponent } from './artist/artist.component';
 import { SignupComponent } from './signup/signup.component';
 import { ChatComponent } from './chat/chat.component';
-import { canActivate, redirectUnauthorizedTo, redirectLoggedInTo } from '@angular/fire/auth-guard';
+import { canActivate, redirectUnauthorizedTo, redirectLoggedInTo, AuthGuard } from '@angular/fire/auth-guard';
 import { ProfileComponent } from './profile/profile.component';
 
 const redirectToLogin = () => redirectUnauthorizedTo(['login']);
@@ -53,7 +53,7 @@ const routes: Routes = [
   { path: 'artist', component: ArtistComponent},
   { path: 'chat', component: ChatComponent},
   { path: 'profile', component: ProfileComponent,
-    ...canActivate(redirectToLogin)
+    canActivate: [AuthGuard]
   },
 
 

@@ -1,12 +1,9 @@
+import { ImageUploadService } from './../services/image-upload.service';
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../services/authentication.service';
-import { Observable } from 'rxjs';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { User as FirebaseUser } from 'firebase/auth';
+import { Observable } from 'rxjs/internal/Observable';
+import { User } from '@angular/fire/auth';
 
-interface User {
-  photoURL?: string; 
-}
 
 @Component({
   selector: 'app-profile',
@@ -17,16 +14,17 @@ interface User {
 
 export class ProfileComponent implements OnInit{
 
-  user$: Observable<User | null>; //code chage using chatgpt time 3.26 bonus 1
-  // user$!: any; //code chage using chatgpt time 3.26 bonus 1
-  
-
-  constructor(private authService: AuthenticationService){
-    this.user$ = this.authService.currentUser$ as Observable<User | null>;
-  }
-  ngOnInit(): void {
-    this.user$ = this.authService.currentUser$;
+  user$: Observable<User | null>; 
+  constructor( private authService: AuthenticationService,
+    // private ImageUploadService: ImageUploadService // error here
+  ){
+    this.user$ = this.authService.currentUser$; 
   }
 
+  ngOnInit(): void {}  
+
+  uploadImage(event: any, user: User){
+
+  }
 }
  
