@@ -3,17 +3,25 @@ import { AuthenticationService } from '../services/authentication.service';
 import { Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { Auth, User as FirebaseUser } from '@angular/fire/auth';
 
+
+
+interface User {
+  photoURL?: string | null; 
+}
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
-export class NavbarComponent  implements OnInit {
 
+export class NavbarComponent  implements OnInit {
+  user: User | null = null;
+  user$: Observable<FirebaseUser | null> | undefined; 
   userName$: Observable<string> | undefined; 
-    constructor(public authService: AuthenticationService, private router:Router) {
+    constructor(public authService: AuthenticationService, private router:Router, private auth: Auth) {
       
     }
     ngOnInit() {
