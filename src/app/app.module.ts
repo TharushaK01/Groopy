@@ -41,7 +41,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { ProfileComponent } from './profile/profile.component';
-
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
 
 
@@ -88,15 +88,22 @@ import { ProfileComponent } from './profile/profile.component';
     FormsModule,
     ReactiveFormsModule,
     MatAutocompleteModule,
-    MatMenuModule,
+
  
 
    
   ],
   providers: [
     provideAnimationsAsync(),
-    provideFirebaseApp(() => initializeApp({"projectId":"groopy-db888","appId":"1:121507118517:web:6bfac9ff72bb46a92eadfc","storageBucket":"groopy-db888.firebasestorage.app","apiKey":"AIzaSyDPBbJbwKy5Oo0iWV-SrYeDCqNaBB0ckfo","authDomain":"groopy-db888.firebaseapp.com","messagingSenderId":"121507118517"})),
-    provideAuth(() => getAuth())
+    provideFirebaseApp(() => initializeApp({
+      "projectId":"groopy-db888",
+      "appId":"1:121507118517:web:6bfac9ff72bb46a92eadfc",
+      "storageBucket":"groopy-db888.firebasestorage.app",
+      "apiKey":"AIzaSyDPBbJbwKy5Oo0iWV-SrYeDCqNaBB0ckfo",
+      "authDomain":"groopy-db888.firebaseapp.com",
+      "messagingSenderId":"121507118517"})),
+    provideAuth(() => getAuth()),
+    provideFirestore(()=> getFirestore()),
   ],
   bootstrap: [AppComponent]
 })
