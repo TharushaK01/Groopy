@@ -46,6 +46,7 @@ import { ProfileComponent } from './profile/profile.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -88,6 +89,8 @@ import { ProfileComponent } from './profile/profile.component';
     ReactiveFormsModule,
     MatAutocompleteModule,
     MatMenuModule,
+ 
+
    
   ],
   providers: [

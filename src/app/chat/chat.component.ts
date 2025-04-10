@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { UsersService } from '../users.service';
+import { UsersService } from '../services/users.service';
 
 @Component({
   selector: 'app-chat',
@@ -8,11 +8,10 @@ import { UsersService } from '../users.service';
   styleUrl: './chat.component.scss'
 })
 export class ChatComponent implements OnInit{
-  // user$ = this.UsersService.currentUserProfile$;
-  // searchControl = new FormControl('');
-  // constructor(private UsersService: UsersService) {
-    
-  // }
+
+  // user$ =this.UsersService.currentUserProfile$;
+  searchConrtol = new FormControl('')
+  constructor(private UsersService: UsersService){}
 
   ngOnInit(): void {}
 
