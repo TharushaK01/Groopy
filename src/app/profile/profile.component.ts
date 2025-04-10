@@ -5,6 +5,7 @@ import { User } from '@angular/fire/auth';
 import { ImageUploadService } from '../services/image-upload.service';
 import { HotToastService } from '@ngneat/hot-toast';
 import { concatMap } from 'rxjs';
+import { FormControl, FormGroup } from '@angular/forms';
 
 
 @Component({
@@ -18,6 +19,17 @@ export class ProfileComponent implements OnInit{
 
   user$: Observable<User | null>; 
   imageUploadService: any;
+
+  profileForm = new FormGroup({
+    uid: new FormControl(''),
+    displayName: new FormControl(''),
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    phone: new FormControl(''),
+    address: new FormControl(''),
+  });
+
+
   constructor( private authService: AuthenticationService,
     private toast: HotToastService,
     // private ImageUploadService: ImageUploadService // error here
@@ -44,5 +56,6 @@ export class ProfileComponent implements OnInit{
       })
     ).subscribe();
   }
+  saveProfile() {}
 }
  
