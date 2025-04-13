@@ -21,6 +21,7 @@
         </li>
         <li class="nav-item">
           <ng-container *ngIf=" authService.currentUser$ | async as user; else loginButton">
+            <!-- bouns2 11.15 change it -->
             <button mat-button color="primary"  class="white-text" [matMenuTriggerFor]="userMenu"> 
               <img class="profile-image" width="30" height="30" [src]="(user$ | async)?.photoURL || 'profile.png'"/>
               {{getDisplayName(user)}}

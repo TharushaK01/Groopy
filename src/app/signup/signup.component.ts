@@ -6,7 +6,9 @@ import { Router } from '@angular/router';
 import { from } from 'rxjs';
 import { Observable, OperatorFunction } from 'rxjs';
 import { pipe } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { switchMap, tap } from 'rxjs/operators';
+import { UsersService } from '../services/users.service';
+
 
 export function passwordsMatchValidator(): ValidatorFn {
   return ( control: AbstractControl): ValidationErrors | null => {
@@ -36,9 +38,10 @@ export class SignupComponent implements OnInit{
     password: new FormControl('',Validators.required),
     confirmPassword: new FormControl('', Validators.required)
   }, { validators: passwordsMatchValidator()})
+  usersService: any;
 
 
-  constructor(private authService: AuthenticationService, private toast: HotToastService, private router: Router){}
+  constructor(private authService: AuthenticationService, private toast: HotToastService, private router: Router, usersService: UsersService){}
   ngOnInit(): void {
       
   }
@@ -59,7 +62,8 @@ export class SignupComponent implements OnInit{
     if (!this.signUpForm.valid) return;
 
     const { name, email, password } =  this.signUpForm.value;
-    this.authService.signUp(name as string, email as string, password as string).pipe(
+    this.authService.signUp(email as string, password as string).pipe(
+      switchMap(({ user: { uid }})=> this.usersService.addUser({ uid, email, displayName: name})),
       this.toast.observe({
         success: 'Congrats! You are all signed up',
         loading: 'Signing in',
