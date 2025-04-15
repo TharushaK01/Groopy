@@ -12,7 +12,8 @@ import { UsersService } from '../services/users.service';
 })
 export class ChatComponent implements OnInit{
 
-  user$ =this.usersService.currentUserProfile$;
+  // user$ =this.usersService.currentUserProfile$;
+  user$!: Observable<any>;
   users$!: Observable<any>; // 2/6 video 6.00s
   // users$ = this.usersService.allUsers$;
   // searchConrtol = new FormControl('')
@@ -21,14 +22,19 @@ export class ChatComponent implements OnInit{
   constructor(private usersService: UsersService){}
 
   ngOnInit(): void {
+    this.user$ = this.usersService.currentUserProfile$;
+    
     this.users$ = combineLatest([
       this.usersService.allUsers$, 
       this.user$,
       this.searchControl.valueChanges.pipe(startWith(''))
     ]).pipe(
-      map(([users, user, searchString])=>users.filter( (u: any)=>u.displayName?.toLoweCase().includes(searchString.toLowerCase())
-    && u.uid !== user?.uid))
-    ); 
+      map(([users, user, searchString])=>
+        users.filter((u: any) => 
+          u.displayName?.toLowerCase().includes((searchString || '').toLowerCase()) &&
+          u.uid !== user?.uid
+  ))
+); 
   }
 
 }
