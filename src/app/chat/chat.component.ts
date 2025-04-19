@@ -3,6 +3,8 @@ import { FormControl } from '@angular/forms';
 
 import { combineLatest, map, Observable, pipe, startWith } from 'rxjs';
 import { UsersService } from '../services/users.service';
+import { ProfileUser } from '../models/user-profile';
+import { ChatsService } from '../services/chats.service';
 
 
 @Component({
@@ -19,7 +21,7 @@ export class ChatComponent implements OnInit{
   // searchConrtol = new FormControl('')
   searchControl = new FormControl('');
 
-  constructor(private usersService: UsersService){}
+  constructor(private usersService: UsersService, private chatsService: ChatsService){}
 
   ngOnInit(): void {
     this.user$ = this.usersService.currentUserProfile$;
@@ -37,4 +39,7 @@ export class ChatComponent implements OnInit{
 ); 
   }
 
+  createChat(otherUser: ProfileUser){
+
+  }
 }
