@@ -21,6 +21,7 @@ import { SignupComponent } from './signup/signup.component';
 import { ChatComponent } from './chat/chat.component';
 import { canActivate, redirectUnauthorizedTo, redirectLoggedInTo, AuthGuard } from '@angular/fire/auth-guard';
 import { ProfileComponent } from './profile/profile.component';
+import { CostdashboardComponent } from './costdashboard/costdashboard.component';
 
 const redirectToLogin = () => redirectUnauthorizedTo(['login']);
 const redirectToHome = () => redirectLoggedInTo(['home']);
@@ -55,7 +56,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent,
     canActivate: [AuthGuard]
   },
-
+  { path: 'costdashboard', component: CostdashboardComponent},
 
 
 ];

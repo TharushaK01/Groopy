@@ -1,0 +1,36 @@
+<div class="dashboard-container">
+    <h1>Cost Dashboard</h1>
+    
+    <form [formGroup]="costForm">
+      <div formArrayName="entries">
+        <div *ngFor="let entry of entries.controls; let i = index" [formGroupName]="i" class="entry-container">
+          <h3>Person {{i + 1}}</h3>
+          
+          <div class="form-group">
+            <label>Person Name:</label>
+            <input type="text" formControlName="personName" class="form-control">
+          </div>
+          
+          <div class="form-group">
+            <label>Item of Booking:</label>
+            <input type="text" formControlName="itemOfBooking" class="form-control">
+          </div>
+          
+          <div class="form-group">
+            <label>Cost:</label>
+            <input type="number" formControlName="cost" class="form-control" (input)="costForm.updateValueAndValidity()">
+          </div>
+          
+          <button type="button" (click)="removeEntry(i)" class="btn btn-danger">Remove</button>
+        </div>
+      </div>
+      
+      <button type="button" (click)="addEntry()" class="btn btn-primary add-btn">Add Person</button>
+      
+      <div class="total-cost">
+        <h3>Total Cost: {{totalCost | currency}}</h3>
+      </div>
+    </form>
+  </div>
+  
+  

@@ -42,6 +42,7 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { ProfileComponent } from './profile/profile.component';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { CostdashboardComponent } from './costdashboard/costdashboard.component';
 
 
 
@@ -73,6 +74,7 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
     SignupComponent,
     ChatComponent,
     ProfileComponent,
+    CostdashboardComponent,
   ],
   imports: [
     BrowserModule,
