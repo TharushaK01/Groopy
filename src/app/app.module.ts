@@ -48,6 +48,7 @@ import { CostdashboardComponent } from './costdashboard/costdashboard.component'
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -75,6 +76,7 @@ import { CostdashboardComponent } from './costdashboard/costdashboard.component'
     ChatComponent,
     ProfileComponent,
     CostdashboardComponent,
+
   ],
   imports: [
     BrowserModule,
