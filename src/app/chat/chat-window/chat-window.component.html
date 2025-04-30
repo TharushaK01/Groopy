@@ -1,1 +1,13 @@
-<p>chat-window works!</p>
+<div class="chat-window-container">
+    <div class="chat-header">
+      <h3>{{ currentChatName || 'Select a chat' }}</h3>
+    </div>
+    
+    <div class="messages-container">
+      <div *ngFor="let message of messages" 
+           [class]="message.isCurrentUser ? 'message sent' : 'message received'">
+        <div class="message-content">{{ message.text }}</div>
+        <div class="message-time">{{ message.timestamp | date:'shortTime' }}</div>
+      </div>
+    </div>
+  </div>

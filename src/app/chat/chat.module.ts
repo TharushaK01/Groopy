@@ -32,3 +32,18 @@ export interface Message {
   timestamp?: Date;
   sender?: string;
 }
+
+// export interface Chat {
+//   id: number;
+//   name: string;
+//   lastMessage?: string;
+//   avatar?: string;
+// }
+
+// export interface Message {
+//   id?: string;
+//   text: string;
+//   timestamp: Date;
+//   sender: string;
+//   isCurrentUser?: boolean;
+// }

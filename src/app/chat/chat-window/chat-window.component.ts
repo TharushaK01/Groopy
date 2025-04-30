@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Message } from '../chat.module';
 
 @Component({
   selector: 'app-chat-window',
@@ -40,5 +41,7 @@ styles: [`
 })
 export class ChatWindowComponent {
   @Input() currentChat: {id: number, name: string} | null = null;
-  @Input() messages: {text: string}[] = [];
+  // @Input() messages: {text: string}[] = [];
+    @Input() messages: Message[] = [];
+  @Input() currentChatName: string = '';
 }
