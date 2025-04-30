@@ -1,56 +1,76 @@
-<div class="p-3" style="margin: 50px;">
-    <h3 class="Trip text-center">Trip</h3>
+<div class="trips-container">
+  <!-- Header Section -->
+  <div class="trips-header">
+    <h2 class="trips-title">Trip Planning</h2>
+    <p class="trips-subtitle">Book everything you need for your perfect trip</p>
   </div>
 
-  <div class="d-flex justify-content-center">
-    <div class="input-group mb-3" style="max-width: 300px;">
-      <input type="text" class="form-control" placeholder="Enter your search" aria-label="Search">
-      <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button">
-          <i class="bi bi-search">Search</i>
-        </button>
+  <div class="search-container">
+    <mat-form-field appearance="outline" class="search-input">
+      <mat-label>Search for services</mat-label>
+      <input matInput placeholder="Search locations, food, etc...">
+      <mat-icon matPrefix>search</mat-icon>
+      <button mat-icon-button matSuffix aria-label="Search">
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+
+  <!-- Trips Grid -->
+  <div class="trips-grid">
+    <!-- Trip Category 1 -->
+    <div class="trip-card mat-elevation-z4" routerLink="/location">
+      <div class="trip-icon">
+        <mat-icon>place</mat-icon>
       </div>
+      <h3 class="trip-title">Locations</h3>
+    </div>
+
+    <!-- Trip Category 2 -->
+    <div class="trip-card mat-elevation-z4" routerLink="/food">
+      <div class="trip-icon">
+        <mat-icon>restaurant</mat-icon>
+      </div>
+      <h3 class="trip-title">Food</h3>
+    </div>
+
+    <!-- Trip Category 3 -->
+    <div class="trip-card mat-elevation-z4" routerLink="/drinks">
+      <div class="trip-icon">
+        <mat-icon>local_bar</mat-icon>
+      </div>
+      <h3 class="trip-title">Drinks</h3>
+    </div>
+
+    <!-- Trip Category 4 -->
+    <div class="trip-card mat-elevation-z4" routerLink="/vehicles">
+      <div class="trip-icon">
+        <mat-icon>directions_car</mat-icon>
+      </div>
+      <h3 class="trip-title">Vehicles</h3>
+    </div>
+
+    <!-- Trip Category 5 -->
+    <div class="trip-card mat-elevation-z4" routerLink="/guide">
+      <div class="trip-icon">
+        <mat-icon>tour</mat-icon>
+      </div>
+      <h3 class="trip-title">Guide</h3>
+    </div>
+
+    <!-- Trip Category 6 -->
+    <div class="trip-card mat-elevation-z4" routerLink="/airtickets">
+      <div class="trip-icon">
+        <mat-icon>flight</mat-icon>
+      </div>
+      <h3 class="trip-title">Air Tickets</h3>
     </div>
   </div>
-  
-  <div class="mb-2">
-      <div class="d-flex flex-row mb-2 justify-content-center" >
-        <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-          <button routerLink="/location" class="btn btn-primary" style="width: 215px; height: 215px;">Locations</button>
-        </div>
-      </div>
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-          <button routerLink="/food" class="btn btn-primary" style="width: 215px; height: 215px;">Food</button>
-        </div>
-      </div>
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-          <button routerLink="/drinks" class="btn btn-primary" style="width: 215px; height: 215px;">Drinks</button>
-        </div>
-      </div>
-      </div>
-      
-    <div class="d-flex flex-row mb-2 justify-content-center">
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-          <button routerLink="/vehicles" class="btn btn-primary" style="width: 215px; height: 215px;">Vehicles</button>
-        </div>
-      </div>
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-          <button routerLink="/guide" class="btn btn-primary" style="width: 215px; height: 215px;">Guide</button>
-        </div>
-      </div>
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-          <button routerLink="/airtickets" class="btn btn-primary" style="width: 215px; height: 215px;">Air Tickets</button>
-        </div>
-      </div>
-    </div>
-    </div>
-    <div class="chat">
-      <button routerLink="/chat" class="btn btn-primary" >chat</button>
-        </div>
-            
+
+  <!-- Chat Button -->
+  <div class="chat-button">
+    <button mat-fab color="primary" aria-label="Chat" [routerLink]="['/chat']">
+      <mat-icon>chat</mat-icon>
+    </button>
+  </div>
+</div>

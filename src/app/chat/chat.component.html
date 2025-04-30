@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <div class="chat-list mat-elevation-z5">
         <div class="search-input">
             <mat-form-field>
@@ -18,4 +18,67 @@
 </div>
 <div class="chat">
     <button routerLink="/costdashboard" class="btn btn-primary" >Cost Dashboard</button>
+      </div> -->
+      <div class="chat-container">
+        <div class="chat-list-container mat-elevation-z8">
+          <div class="chat-header">
+            <h2 class="chat-title">Messages</h2>
+            <p class="chat-subtitle">Connect with your group members</p>
+          </div>
+      
+          <div class="search-container">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Search for users</mat-label>
+              <input matInput 
+                     [formControl]="searchControl" 
+                     [matAutocomplete]="users"
+                     placeholder="Type a name...">
+              <mat-icon matPrefix>search</mat-icon>
+            </mat-form-field>
+            
+            <mat-autocomplete #users="matAutocomplete" class="user-autocomplete">
+              <mat-option *ngFor="let user of users$ | async" 
+                          (click)="createChat(user)"
+                          class="user-option">
+                <div class="user-option-content">
+                  <img [src]="user.photoURL || 'profile.png'" 
+                       class="user-avatar" 
+                       alt="{{ user.displayName }}">
+                  <span class="user-name">{{ user.displayName }}</span>
+                </div>
+              </mat-option>
+            </mat-autocomplete>
+          </div>
+      
+          <div class="conversation-list">
+            <!-- Your conversation list would go here -->
+            <!-- Example: -->
+            <!-- <div *ngFor="let chat of chats$ | async" class="conversation-item">
+                 ...
+                 </div> -->
+          </div>
+        </div>
+      
+        <div class="messages-container mat-elevation-z8">
+          <div class="messages-header">
+            <h3 class="messages-title">Conversation</h3>
+          </div>
+          <div class="messages-content">
+            <!-- Your messages would go here -->
+            <!-- Example: -->
+            <!-- <div *ngFor="let message of messages$ | async" class="message">
+                 ...
+                 </div> -->
+          </div>
+          <div class="message-input">
+            <!-- Your message input would go here -->
+          </div>
+        </div>
+      </div>
+      
+      <div class="dashboard-button">
+        <button routerLink="/costdashboard" mat-raised-button color="primary">
+          <mat-icon>dashboard</mat-icon>
+          Cost Dashboard
+        </button>
       </div>

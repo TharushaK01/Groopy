@@ -1,11 +1,144 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
+.footer {
+    background-color: #328E6E;
+    color: #FFFFFF;
+    padding: 3rem 0 1.5rem;
+    font-family: 'Inter', sans-serif;
 }
 
-footer {
-    margin-top: auto;
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.footer-heading {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    position: relative;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+}
+
+.footer-heading:after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #FFFFFF;
+}
+
+.footer-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+    opacity: 0.7;
+    padding-left: 8px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    margin: 0 6px;
+    color: #FFFFFF;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: #FFFFFF;
+    color: #1A4D3A;
+    transform: translateY(-2px);
+}
+
+.social-icon mat-icon {
+    font-size: 1.2rem;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-info p {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info mat-icon {
+    width: 24px;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+.company-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    max-width: 350px;
+}
+
+.copyright {
+    background-color: #4DA886;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+.copyright a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.copyright a:hover {
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .footer-container .row > div {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .footer-heading:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-link {
+        display: inline-block;
+    }
+
+    .contact-info p {
+        justify-content: center;
+    }
+
+    .company-description {
+        max-width: 100%;
+    }
 }

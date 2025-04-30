@@ -1,26 +1,106 @@
-.container{
-  margin-left: 30px;
-  display: block;
-  margin: auto;
-  background: #eceff1;
-  padding: 70px;
-  border-radius: 16px;
-  max-width: 400px;
+// 
+
+.login-container {
+  max-width: 450px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  border-radius: 12px;
+  background: white;
+  transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
 }
-.container mat-form-field {
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1DCD9F;
+  margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-subtitle {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.full-width {
   width: 100%;
 }
-.center {
-  display: flex;
-  justify-content: center;
+
+.mat-form-field-outline {
+  color: rgba(0,0,0,0.1);
 }
-.margin-top {
-  margin-top: 16px;
+
+.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+  color: #1DCD9F;
 }
-.text-center {
+
+.login-button {
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+  
+  mat-icon {
+      margin-left: 0.5rem;
+      font-size: 1.2rem;
+      height: 1.2rem;
+      width: 1.2rem;
+  }
+  
+  &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(29, 205, 159, 0.3);
+  }
+}
+
+.text-link {
+  color: #1DCD9F;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  
+  &:hover {
+      color: darken(#1DCD9F, 10%);
+      text-decoration: underline;
+  }
+}
+
+.forgot-password {
+  text-align: right;
+  margin-top: -1rem;
+}
+
+.signup-link {
   text-align: center;
+  margin-top: 1rem;
+  color: #666;
 }
-.sign-up-link {
-  font-size: 1.2rem;
-  margin-top: 8px;
+
+// Animation for form elements
+.mat-form-field {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  
+  &:hover {
+      transform: translateX(3px);
+  }
 }

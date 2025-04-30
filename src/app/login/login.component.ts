@@ -14,6 +14,7 @@ loginform = new FormGroup({
   email: new FormControl('', [Validators.required, Validators.email]),
   password: new FormControl('', Validators.required)
 })
+hidePassword: boolean = true; 
   constructor(private authService: AuthenticationService, private router: Router, private toast: HotToastService){}
   ngOnInit(): void {
       
@@ -24,7 +25,7 @@ get email() {
 get password() {
   return this.loginform.get('password');
 }
- submit(){
+submit(){
   if (!this.loginform.valid) {
     return;
   }

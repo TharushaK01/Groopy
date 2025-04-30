@@ -1,134 +1,100 @@
-<div class="p-3" style="margin: 50px;">
-    <h3 class="Wedding text-center">Guides</h3>
-  </div>
-  <div class="d-flex justify-content-center">
-    <div class="input-group mb-3" style="max-width: 300px;">
-      <input type="text" class="form-control" placeholder="Enter your search" aria-label="Search">
-      <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button">
-          <i class="bi bi-search">Search</i>
+<div class="guides-container">
+  <!-- Header Section -->
+  <div class="guides-header mat-elevation-z4">
+    <h2 class="guides-title">Discover Tour Guides</h2>
+    <p class="guides-subtitle">Find the perfect guide for your trip</p>
+    
+    <div class="search-container">
+      <mat-form-field appearance="outline" class="search-input">
+        <mat-label>Search guides by name or service</mat-label>
+        <input matInput placeholder="e.g. Get Your Guide, TourHQ...">
+        <mat-icon matPrefix>search</mat-icon>
+        <button mat-icon-button matSuffix aria-label="Search" class="search-button">
+          <mat-icon>search</mat-icon>
         </button>
-      </div>
+      </mat-form-field>
     </div>
   </div>
-  
-  <div class="mb-2">
-      <div class="d-flex flex-row mb-2 justify-content-center" >
-        <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-            <div class="card-body">
-                <a href="https://www.getyourguide.com/-l169048/?cmp=ga&cq_src=google_ads&cq_cmp=16383724310&cq_con=136769292714&cq_term=sri%20lanka%20local%20tour%20operators&cq_med=&cq_plac=&cq_net=g&cq_pos=&cq_plt=gp&campaign_id=16383724310&adgroup_id=136769292714&target_id=kwd-301364168772&loc_physical_ms=1009919&match_type=b&ad_id=586389096206&keyword=sri%20lanka%20local%20tour%20operators&ad_position=&feed_item_id=&placement=&device=c&partner_id=CD951&gad_source=1&gclid=CjwKCAiAzvC9BhADEiwAEhtlN9_IBpIemYwkzfCXlHIRRa4CDUlAmWT22Bu05Uu0T-lIl64S3drx2RoCy0MQAvD_BwE" target="_blank" style="text-decoration: none;">
-                <button class="btn btn-primary position-relative overflow-hidden" 
-                        style="width: 215px; height: 215px; display: flex; align-items: center; justify-content: center; text-align: center;">
-                  <!-- Image inside the button -->
-                  <img src="Getyourguide.jpg" alt="Cinnamon Lodge" 
-                       style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.5;">
-                  
-                  <!-- Text container -->
-                  <div style="position: relative; z-index: 1; color: white; font-weight: bold;">
-                    <span style="display: block; font-size: 18px;">Get Your Guide</span>
-                    
-                  </div>
-                </button>
-                </a>
-              </div>
-      </div>
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-            <a href="https://www.showaround.com/" target="_blank" style="text-decoration: none;">
-            <button class="btn btn-primary position-relative overflow-hidden" 
-                    style="width: 215px; height: 215px; display: flex; align-items: center; justify-content: center; text-align: center;">
-              <!-- Image inside the button -->
-              <img src="showarround.png" alt="Hilton Yala Resort" 
-                   style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.5;">
-              
-              <!-- Text container -->
-              <div style="position: relative; z-index: 1; color: white; font-weight: bold;">
-                <span style="display: block; font-size: 18px;">Showround</span>
-                
-              </div>
-            </button>
-        </a>
+
+  <!-- Guides Grid -->
+  <div class="guides-grid">
+    <!-- Guide 1 -->
+    <div class="guide-card mat-elevation-z4">
+      <a href="https://www.getyourguide.com/-l169048/?cmp=ga&cq_src=google_ads&cq_cmp=16383724310&cq_con=136769292714&cq_term=sri%20lanka%20local%20tour%20operators&cq_med=&cq_plac=&cq_net=g&cq_pos=&cq_plt=gp&campaign_id=16383724310&adgroup_id=136769292714&target_id=kwd-301364168772&loc_physical_ms=1009919&match_type=b&ad_id=586389096206&keyword=sri%20lanka%20local%20tour%20operators&ad_position=&feed_item_id=&placement=&device=c&partner_id=CD951&gad_source=1&gclid=CjwKCAiAzvC9BhADEiwAEhtlN9_IBpIemYwkzfCXlHIRRa4CDUlAmWT22Bu05Uu0T-lIl64S3drx2RoCy0MQAvD_BwE" target="_blank" class="guide-link">
+        <div class="guide-image" style="background-image: url('Getyourguide.jpg');">
+          <div class="guide-overlay"></div>
+          <div class="guide-info">
+            <h3>Get Your Guide</h3>
           </div>
-      </div>
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-            <a href="https://gowithguide.com/sri-lanka/guides?srsltid=AfmBOopI51u4uxS3YTNKGUat8pZpPTOsh15v6M4ci0yikNHmgWm0NeLg" target="_blank" style="text-decoration: none;">
-            <button class="btn btn-primary position-relative overflow-hidden" 
-                    style="width: 215px; height: 215px; display: flex; align-items: center; justify-content: center; text-align: center;">
-              <!-- Image inside the button -->
-              <img src="gowithguide.png" alt="Hidde Inn Unawatuna" 
-                   style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.5;">
-              
-              <!-- Text container -->
-              <div style="position: relative; z-index: 1; color: white; font-weight: bold;">
-                <span style="display: block; font-size: 18px;">Gowith Guide</span>
-                
-              </div>
-            </button>
-        </a>
-          </div>
-      </div>
-      </div>
-      
-    <div class="d-flex flex-row mb-2 justify-content-center">
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-            <a href="https://pro.regiondo.com/booking-system/" target="_blank" style="text-decoration: none;">
-            <button class="btn btn-primary position-relative overflow-hidden" 
-                    style="width: 215px; height: 215px; display: flex; align-items: center; justify-content: center; text-align: center;">
-              <!-- Image inside the button -->
-              <img src="regiondo.jpg" alt="Aliya Resort and Spa" 
-                   style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.5;">
-              
-              <!-- Text container -->
-              <div style="position: relative; z-index: 1; color: white; font-weight: bold;">
-                <span style="display: block; font-size: 18px;">Regiondo</span>
-             
-              </div>
-            </button>
-        </a>
-          </div>
-      </div>
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-            <a href="https://www.srilanka.travel/tourist-guides" target="_blank" style="text-decoration: none;">
-            <button class="btn btn-primary position-relative overflow-hidden" 
-                    style="width: 215px; height: 215px; display: flex; align-items: center; justify-content: center; text-align: center;">
-              <!-- Image inside the button -->
-              <img src="TouristGuides.jpg" alt="Sigiriya Jungles" 
-                   style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.5;">
-              
-              <!-- Text container -->
-              <div style="position: relative; z-index: 1; color: white; font-weight: bold;">
-                <span style="display: block; font-size: 18px;">Tourist Guides </span>
-     
-              </div>
-            </button>
-        </a>
-          </div>
-      </div>
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-            <a href="https://www.tourhq.com/" target="_blank" style="text-decoration: none;">
-            <button class="btn btn-primary position-relative overflow-hidden" 
-                    style="width: 215px; height: 215px; display: flex; align-items: center; justify-content: center; text-align: center;">
-              <!-- Image inside the button -->
-              <img src="tourHQ.jpg" alt="Deer Park Hotel" 
-                   style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.5;">
-              
-              <!-- Text container -->
-              <div style="position: relative; z-index: 1; color: white; font-weight: bold;">
-                <span style="display: block; font-size: 18px;">TourHQ</span>
-                
-              </div>
-            </button>
-        </a>
-          </div>
-      </div>
-    </div>
+        </div>
+      </a>
     </div>
 
-    <div class="chat">
-      <button routerLink="/chat" class="btn btn-primary" >chat</button>
+    <!-- Guide 2 -->
+    <div class="guide-card mat-elevation-z4">
+      <a href="https://www.showaround.com/" target="_blank" class="guide-link">
+        <div class="guide-image" style="background-image: url('showarround.png');">
+          <div class="guide-overlay"></div>
+          <div class="guide-info">
+            <h3>Showaround</h3>
+          </div>
         </div>
-            
+      </a>
+    </div>
+
+    <!-- Guide 3 -->
+    <div class="guide-card mat-elevation-z4">
+      <a href="https://gowithguide.com/sri-lanka/guides?srsltid=AfmBOopI51u4uxS3YTNKGUat8pZpPTOsh15v6M4ci0yikNHmgWm0NeLg" target="_blank" class="guide-link">
+        <div class="guide-image" style="background-image: url('gowithguide.png');">
+          <div class="guide-overlay"></div>
+          <div class="guide-info">
+            <h3>Gowith Guide</h3>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Guide 4 -->
+    <div class="guide-card mat-elevation-z4">
+      <a href="https://pro.regiondo.com/booking-system/" target="_blank" class="guide-link">
+        <div class="guide-image" style="background-image: url('regiondo.jpg');">
+          <div class="guide-overlay"></div>
+          <div class="guide-info">
+            <h3>Regiondo</h3>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Guide 5 -->
+    <div class="guide-card mat-elevation-z4">
+      <a href="https://www.srilanka.travel/tourist-guides" target="_blank" class="guide-link">
+        <div class="guide-image" style="background-image: url('TouristGuides.jpg');">
+          <div class="guide-overlay"></div>
+          <div class="guide-info">
+            <h3>Tourist Guides</h3>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Guide 6 -->
+    <div class="guide-card mat-elevation-z4">
+      <a href="https://www.tourhq.com/" target="_blank" class="guide-link">
+        <div class="guide-image" style="background-image: url('tourHQ.jpg');">
+          <div class="guide-overlay"></div>
+          <div class="guide-info">
+            <h3>TourHQ</h3>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Chat Button -->
+  <div class="chat-button">
+    <button mat-fab color="primary" aria-label="Chat" [routerLink]="['/chat']">
+      <mat-icon>chat</mat-icon>
+    </button>
+  </div>
+</div>

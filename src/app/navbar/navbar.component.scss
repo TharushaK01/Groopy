@@ -1,22 +1,40 @@
-.divider:after,
-.divider:before {
-content: "";
-flex: 1;
-height: 1px;
-background: #eee;
-}
-.h-custom {
-height: calc(100% - 73px);
-}
-@media (max-width: 450px) {
-.h-custom {
-height: 100%;
-}
-}
-.white-text {
-    color: white !important;
-  }
+// .divider:after,
+// .divider:before {
+// content: "";
+// flex: 1;
+// height: 1px;
+// background: #eee;
+// }
+// .h-custom {
+// height: calc(100% - 73px);
+// }
+// @media (max-width: 450px) {
+// .h-custom {
+// height: 100%;
+// }
+// }
+// .white-text {
+//     color: white !important;
+//   }
   
-  .white-text mat-icon {
-    color: white !important;
-  }
+//   .white-text mat-icon {
+//     color: white !important;
+//   }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.custom-toolbar {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-link {
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+.white-text {
+  color: white !important;
+}

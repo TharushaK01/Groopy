@@ -1,4 +1,4 @@
-<div class="p-3" style="margin: 50px;">
+<!-- <div class="p-3" style="margin: 50px;">
     <h3 class="Wedding text-center">Wedding</h3>
   </div>
   <div class="d-flex justify-content-center">
@@ -51,4 +51,73 @@
     </div>
     <div class="chat">
       <button routerLink="/chat" class="btn btn-primary" >chat</button>
+        </div> -->
+        <div class="wedding-container">
+          <div class="wedding-header">
+            <h2 class="wedding-title">Wedding Planning</h2>
+            <p class="wedding-subtitle">Book everything you need for your special day</p>
+          </div>
+        
+          <div class="search-container">
+            <mat-form-field appearance="outline" class="search-input">
+              <mat-label>Search for services</mat-label>
+              <input matInput placeholder="Search hotels, photographers, etc...">
+              <mat-icon matPrefix>search</mat-icon>
+              <button mat-icon-button matSuffix aria-label="Search">
+                <mat-icon>search</mat-icon>
+              </button>
+            </mat-form-field>
+          </div>
+        
+          <div class="services-grid">
+            <!-- First Row -->
+            <div class="service-card mat-elevation-z4" routerLink="/hotels">
+              <div class="service-icon">
+                <mat-icon>hotel</mat-icon>
+              </div>
+              <h3 class="service-title">Hotels</h3>
+            </div>
+        
+            <div class="service-card mat-elevation-z4" routerLink="/food">
+              <div class="service-icon">
+                <mat-icon>restaurant</mat-icon>
+              </div>
+              <h3 class="service-title">Food</h3>
+            </div>
+        
+            <div class="service-card mat-elevation-z4" routerLink="/drinks">
+              <div class="service-icon">
+                <mat-icon>local_bar</mat-icon>
+              </div>
+              <h3 class="service-title">Drinks</h3>
+            </div>
+        
+            <!-- Second Row -->
+            <div class="service-card mat-elevation-z4" routerLink="/vehicles">
+              <div class="service-icon">
+                <mat-icon>directions_car</mat-icon>
+              </div>
+              <h3 class="service-title">Vehicles</h3>
+            </div>
+        
+            <div class="service-card mat-elevation-z4" routerLink="/photographers">
+              <div class="service-icon">
+                <mat-icon>photo_camera</mat-icon>
+              </div>
+              <h3 class="service-title">Photographers</h3>
+            </div>
+        
+            <div class="service-card mat-elevation-z4" routerLink="/decoration">
+              <div class="service-icon">
+                <mat-icon>celebration</mat-icon>
+              </div>
+              <h3 class="service-title">Decoration</h3>
+            </div>
+          </div>
+        
+          <div class="chat-button">
+            <button routerLink="/chat" mat-fab color="primary" aria-label="Chat">
+              <mat-icon>chat</mat-icon>
+            </button>
+          </div>
         </div>
