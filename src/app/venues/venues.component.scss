@@ -1,128 +1,131 @@
-.locations-container-alt {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1.5rem;
+.locations-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.locations-header {
+  background-color: #03A791;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.locations-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.locations-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.search-container   {
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-input .mat-form-field-outline {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+}
+
+.search-button {
+  color: #03A791;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.location-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.location-link {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: block;
+}
+
+.location-image {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.location-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
+}
+
+.location-info {
+  position: relative;
+  z-index: 1;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.location-info h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.chat-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+.chat-button button {
+  transition: transform 0.3s ease;
+}
+
+.chat-button button:hover {
+  transform: scale(1.1) rotate(10deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .locations-grid {
+    grid-template-columns: 1fr;
   }
-  
-  .locations-header-alt {
-    background-color: #3f51b5; /* Primary color from Material Design */
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    color: white;
+
+  .locations-title {
+    font-size: 1.8rem;
   }
-  
-  .locations-title-alt {
-    font-size: 2rem;
-    font-weight: 500;
-    margin-bottom: 0;
-    font-family: 'Roboto', sans-serif;
+
+  .location-image {
+    height: 200px;
   }
-  
-  .search-container-alt {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
-    gap: 1rem; /* Space between input and button */
-  }
-  
-  .search-input-alt {
-    width: 100%;
-    max-width: 300px; /* As specified in the Bootstrap HTML */
-  
-    .mat-form-field-outline {
-      background-color: white;
-      border-radius: 4px;
-    }
-  }
-  
-  
-  .locations-grid-alt {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Based on card width */
-    gap: 1.5rem;
-    margin-bottom: 4rem; /* To accommodate the fixed chat button */
-  }
-  
-  .location-card-alt {
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  
-    &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-  }
-  
-  .location-link-alt {
-    text-decoration: none;
-    color: white;
-    display: block;
-    height: 100%;
-  }
-  
-  .location-image-alt {
-    height: 200px; /* Adjust as needed */
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .location-overlay-alt {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3); /* Slightly different overlay */
-  }
-  
-  .location-info-alt {
-    position: relative;
-    z-index: 1;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    font-size: 1.2rem;
-  }
-  
-  .chat-button {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 100;
-  
-    button {
-      transition: all 0.3s ease;
-  
-      &:hover {
-        transform: scale(1.1) rotate(10deg);
-      }
-    }
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .locations-grid-alt {
-      grid-template-columns: 1fr;
-      margin-bottom: 70px; /* Adjust for chat button */
-    }
-  
-    .locations-title-alt {
-      font-size: 1.8rem;
-    }
-  
-    .search-container-alt {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .search-input-alt {
-      max-width: 100%;
-    }
-  }
+}
