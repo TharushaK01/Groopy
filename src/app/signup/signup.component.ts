@@ -1,24 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+// import { Component } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { AuthenticationService } from '../services/authentication.service';
 import { HotToastService } from '@ngneat/hot-toast';
 import { Router } from '@angular/router';
-import { from } from 'rxjs';
-import { Observable, OperatorFunction } from 'rxjs';
-import { pipe } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { switchMap } from 'rxjs/operators';
+import { UsersService } from '../services/users.service';
+import { Component } from '@angular/core';
 
 export function passwordsMatchValidator(): ValidatorFn {
-  return ( control: AbstractControl): ValidationErrors | null => {
-    const password = control.get ('password')?.value;
+  return (control: AbstractControl): ValidationErrors | null => {
+    const password = control.get('password')?.value;
     const confirmPassword = control.get('confirmPassword')?.value;
 
     if (password && confirmPassword && password !== confirmPassword) {
-      return {
-        passwordDontMatch : true
-      }
+      return { passwordsDontMatch: true };
     }
-
     return null;
   };
 }
@@ -26,47 +22,63 @@ export function passwordsMatchValidator(): ValidatorFn {
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrl: './signup.component.scss'
+  styleUrls: ['./signup.component.scss']
 })
-export class SignupComponent implements OnInit{
-
+export class SignupComponent {
   signUpForm = new FormGroup({
-    name: new FormControl('', Validators.required),
-    email: new FormControl('', [Validators.email, Validators.required]),
-    password: new FormControl('',Validators.required),
+    name: new FormControl('', [Validators.required, Validators.minLength(2)]),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', [Validators.required, Validators.minLength(6)]),
     confirmPassword: new FormControl('', Validators.required)
-  }, { validators: passwordsMatchValidator()})
+  }, { validators: passwordsMatchValidator() });
 
+  hidePassword = true;
+  hideConfirmPassword = true;
 
-  constructor(private authService: AuthenticationService, private toast: HotToastService, private router: Router){}
-  ngOnInit(): void {
-      
-  }
+  constructor(
+    private authService: AuthenticationService,
+    private toast: HotToastService,
+    private router: Router,
+    private usersService: UsersService
+  ) {}
 
   get name() {
     return this.signUpForm.get('name');
   }
+
   get email() {
     return this.signUpForm.get('email');
   }
+
   get password() {
     return this.signUpForm.get('password');
   }
+
   get confirmPassword() {
     return this.signUpForm.get('confirmPassword');
   }
-  submit(){
+
+  submit() {
     if (!this.signUpForm.valid) return;
 
-    const { name, email, password } =  this.signUpForm.value;
-    this.authService.signUp(name as string, email as string, password as string).pipe(
+    const { name, email, password } = this.signUpForm.value;
+    
+    this.authService.signUp(email as string, password as string).pipe(
       this.toast.observe({
-        success: 'Congrats! You are all signed up',
-        loading: 'Signing in',
+        success: 'Congratulations! Your account has been created',
+        loading: 'Creating your account...',
         error: ({ message }) => `${message}`
-      })
-    ).subscribe(()=> {
-      this.router.navigate(['/home']);
-    })
+      }),
+      switchMap(({ user: { uid } }) => 
+        this.usersService.addUser({ uid, email: email as string, displayName: name as string })
+      )
+    ).subscribe({
+      next: () => {
+        this.router.navigate(['/home']);
+      },
+      error: (error) => {
+        console.error('Signup error:', error);
+      }
+    });
   }
 }

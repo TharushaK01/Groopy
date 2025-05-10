@@ -1,0 +1,136 @@
+.artists-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+  }
+  
+  .artists-header {
+    background-color: #03A791;  // Purple theme for artists
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: white;
+  }
+  
+  .artists-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .artists-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+  }
+  
+  .search-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-input {
+    width: 100%;
+    max-width: 500px;
+    
+    .mat-form-field-outline {
+      background-color: white;
+      border-radius: 8px;
+    }
+  }
+  
+  .search-button {
+    color: rgba(0,0,0,0.3);  // Matching the header color
+  }
+  
+  .artists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .artist-card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+  }
+  
+  .artist-link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .artist-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .artist-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.3));
+  }
+  
+  .artist-info {
+    position: relative;
+    z-index: 1;
+    padding: 1.5rem;
+    width: 100%;
+    
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    p {
+      margin: 0;
+      opacity: 0.9;
+      font-size: 1rem;
+    }
+  }
+  
+  .chat-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    
+    button {
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: scale(1.1) rotate(10deg);
+      }
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .artists-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .artists-title {
+      font-size: 1.8rem;
+    }
+    
+    .artist-image {
+      height: 200px;
+    }
+  }

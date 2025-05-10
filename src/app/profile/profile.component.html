@@ -1,4 +1,4 @@
-<div class="center-page">
+<!-- <div class="center-page">
 <div class="form-container mat-elevation-z5 text-center" 
 *ngIf="user$ | async as user">
     <h1>User Profile</h1>
@@ -63,4 +63,66 @@
     </button>
   </form>
 </div>
+</div> -->
+<div class="profile-container">
+  <div class="profile-card mat-elevation-z8" *ngIf="user$ | async as user">
+    <div class="profile-header">
+      <h1 class="profile-title">User Profile</h1>
+      <p class="profile-subtitle">Manage your personal information</p>
+    </div>
+
+    <div class="profile-image-container">
+      <div class="profile-image-wrapper">
+        <img class="profile-image" [src]="user.photoURL ?? 'profile.png'" alt="Profile picture">
+        <button mat-mini-fab color="primary" class="edit-photo-btn" (click)="inputField.click()">
+          <mat-icon>edit</mat-icon>
+        </button>
+      </div>
+      <input #inputField type="file" hidden accept="image/*" (change)="uploadImage($event, user)">
+    </div>
+
+    <form class="profile-form" [formGroup]="profileForm" (ngSubmit)="saveProfile()">
+      <div class="form-row">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="firstName" placeholder="John">
+          <mat-icon matPrefix>person_outline</mat-icon>
+          <mat-error *ngIf="profileForm.get('firstName')?.invalid">First name is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="lastName" placeholder="Doe">
+          <mat-icon matPrefix>person_outline</mat-icon>
+          <mat-error *ngIf="profileForm.get('lastName')?.invalid">Last name is required</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-row">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Display Name</mat-label>
+          <input matInput formControlName="displayName" placeholder="JohnDoe">
+          <mat-icon matPrefix>badge</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Phone</mat-label>
+          <input matInput type="tel" formControlName="phone" placeholder="+1 (123) 456-7890">
+          <mat-icon matPrefix>phone</mat-icon>
+          <mat-error *ngIf="profileForm.get('phone')?.invalid">Please enter a valid phone number</mat-error>
+        </mat-form-field>
+      </div>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Address</mat-label>
+        <input matInput formControlName="address" placeholder="123 Main St, City, Country">
+        <mat-icon matPrefix>home</mat-icon>
+      </mat-form-field>
+
+      <button type="submit" mat-raised-button color="primary" class="save-btn" [disabled]="profileForm.invalid">
+        Save Changes
+        <mat-icon>save</mat-icon>
+      </button>
+    </form>
+  </div>
 </div>

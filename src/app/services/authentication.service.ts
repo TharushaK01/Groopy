@@ -16,10 +16,8 @@ export class AuthenticationService {
   login(username: string, password: string){
    return from(signInWithEmailAndPassword(this.auth, username, password));
   }
-  signUp(name: string, email: string, password: string) {
-    return from(signInWithEmailAndPassword(this.auth, email, password)).pipe(
-      switchMap(({ user }) => updateProfile(user, {displayName: name}))
-    );
+  signUp( email: string, password: string) {
+    return from(signInWithEmailAndPassword(this.auth, email, password))
   }
 
   updateProfileData(profileData: Partial<UserInfo>): Observable<any>{

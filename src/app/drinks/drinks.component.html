@@ -1,130 +1,100 @@
-<div class="p-3" style="margin: 50px;">
-    <h3 class="Wedding text-center">Drinks</h3>
-  </div>
-  <div class="d-flex justify-content-center">
-    <div class="input-group mb-3" style="max-width: 300px;">
-      <input type="text" class="form-control" placeholder="Enter your search" aria-label="Search">
-      <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button">
-          <i class="bi bi-search">Search</i>
+<div class="drinks-container">
+  <!-- Header Section -->
+  <div class="drinks-header mat-elevation-z4">
+    <h2 class="drinks-title">Discover Drinks Services</h2>
+    <p class="drinks-subtitle">Find the perfect beverages for your event</p>
+    
+    <div class="search-container">
+      <mat-form-field appearance="outline" class="search-input">
+        <mat-label>Search drinks</mat-label>
+        <input matInput placeholder="e.g. SOZO, Coca-Cola">
+        <mat-icon matPrefix>search</mat-icon>
+        <button mat-icon-button matSuffix aria-label="Search">
+          <mat-icon>search</mat-icon>
         </button>
-      </div>
+      </mat-form-field>
     </div>
   </div>
-  
-  <div class="mb-2">
-      <div class="d-flex flex-row mb-2 justify-content-center" >
-        <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-            <div class="card-body">
-                <a href="https://www.srilankabusiness.com/exporters-directory/company-profiles/sozo-beverages-pvt-ltd/" target="_blank" style="text-decoration: none;">
-                <button class="btn btn-primary position-relative overflow-hidden" 
-                        style="width: 215px; height: 215px; display: flex; align-items: center; justify-content: center; text-align: center;">
-                  <!-- Image inside the button -->
-                  <img src="sozo.png" alt="Cinnamon Lodge" 
-                       style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.5;">
-                  
-                  <!-- Text container -->
-                  <div style="position: relative; z-index: 1; color: white; font-weight: bold;">
-                    <span style="display: block; font-size: 18px;">SOZO</span>
-                   
-                  </div>
-                </button>
-                </a>
-              </div>
-      </div>
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-            <a href="https://www.maxbeverages.lk/" target="_blank" style="text-decoration: none;">
-            <button class="btn btn-primary position-relative overflow-hidden" 
-                    style="width: 215px; height: 215px; display: flex; align-items: center; justify-content: center; text-align: center;">
-              <!-- Image inside the button -->
-              <img src="max.png" alt="Stream Boat" 
-                   style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.5;">
-              
-              <!-- Text container -->
-              <div style="position: relative; z-index: 1; color: white; font-weight: bold;">
-                <span style="display: block; font-size: 18px;">Max Beverages</span>
-               
-              </div>
-            </button>
-        </a>
+
+  <!-- Drinks Grid -->
+  <div class="drinks-grid">
+    <!-- Drink 1 -->
+    <div class="drink-card mat-elevation-z4">
+      <a href="https://www.srilankabusiness.com/exporters-directory/company-profiles/sozo-beverages-pvt-ltd/" target="_blank" class="drink-link">
+        <div class="drink-image" style="background-image: url('sozo.png');">
+          <div class="drink-overlay"></div>
+          <div class="drink-info">
+            <h3>SOZO</h3>
           </div>
-      </div>
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-            <a href="https://www.coca-cola.com/lk/en" target="_blank" style="text-decoration: none;">
-            <button class="btn btn-primary position-relative overflow-hidden" 
-                    style="width: 215px; height: 215px; display: flex; align-items: center; justify-content: center; text-align: center;">
-              <!-- Image inside the button -->
-              <img src="cocacola.png" alt="Warna Caterers" 
-                   style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.5;">
-              
-              <!-- Text container -->
-              <div style="position: relative; z-index: 1; color: white; font-weight: bold;">
-                <span style="display: block; font-size: 18px;">Coca-Cola</span>
-                
-              </div>
-            </button>
-        </a>
-          </div>
-      </div>
-      </div>
-      
-    <div class="d-flex flex-row mb-2 justify-content-center">
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-            <a href="https://www.anchorsrilanka.com/" target="_blank" style="text-decoration: none;">
-            <button class="btn btn-primary position-relative overflow-hidden" 
-                    style="width: 215px; height: 215px; display: flex; align-items: center; justify-content: center; text-align: center;">
-              <!-- Image inside the button -->
-              <img src="Anchor.png" alt="Aliya Resort and Spa" 
-                   style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.5;">
-              
-              <!-- Text container -->
-              <div style="position: relative; z-index: 1; color: white; font-weight: bold;">
-                <span style="display: block; font-size: 18px;">Anchor</span>
-                
-              </div>
-            </button>
-        </a>
-          </div>
-      </div>
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-            <a href="https://knucklesspring.com/" target="_blank" style="text-decoration: none;">
-            <button class="btn btn-primary position-relative overflow-hidden" 
-                    style="width: 215px; height: 215px; display: flex; align-items: center; justify-content: center; text-align: center;">
-              <!-- Image inside the button -->
-              <img src="knuckles.png" alt="Sigiriya Jungles" 
-                   style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.5;">
-              
-              <!-- Text container -->
-              <div style="position: relative; z-index: 1; color: white; font-weight: bold;">
-                <span style="display: block; font-size: 18px;">Knuckles</span>
-                
-              </div>
-            </button>
-        </a>
-          </div>
-      </div>
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-            <a href="https://www.ceylonbeverage.com/" target="_blank" style="text-decoration: none;">
-            <button class="btn btn-primary position-relative overflow-hidden" 
-                    style="width: 215px; height: 215px; display: flex; align-items: center; justify-content: center; text-align: center;">
-              <!-- Image inside the button -->
-              <img src="ceylonbeverage.png" alt="Deer Park Hotel" 
-                   style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.5;">
-              
-              <!-- Text container -->
-              <div style="position: relative; z-index: 1; color: white; font-weight: bold;">
-                <span style="display: block; font-size: 18px;">Ceylon Beverage</span>
-                
-              </div>
-            </button>
-        </a>
-          </div>
-      </div>
-    </div>
+        </div>
+      </a>
     </div>
 
+    <!-- Drink 2 -->
+    <div class="drink-card mat-elevation-z4">
+      <a href="https://www.maxbeverages.lk/" target="_blank" class="drink-link">
+        <div class="drink-image" style="background-image: url('max.png');">
+          <div class="drink-overlay"></div>
+          <div class="drink-info">
+            <h3>Max Beverages</h3>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Drink 3 -->
+    <div class="drink-card mat-elevation-z4">
+      <a href="https://www.coca-cola.com/lk/en" target="_blank" class="drink-link">
+        <div class="drink-image" style="background-image: url('cocacola.png');">
+          <div class="drink-overlay"></div>
+          <div class="drink-info">
+            <h3>Coca-Cola</h3>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Drink 4 -->
+    <div class="drink-card mat-elevation-z4">
+      <a href="https://www.anchorsrilanka.com/" target="_blank" class="drink-link">
+        <div class="drink-image" style="background-image: url('Anchor.png');">
+          <div class="drink-overlay"></div>
+          <div class="drink-info">
+            <h3>Anchor</h3>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Drink 5 -->
+    <div class="drink-card mat-elevation-z4">
+      <a href="https://knucklesspring.com/" target="_blank" class="drink-link">
+        <div class="drink-image" style="background-image: url('knuckles.png');">
+          <div class="drink-overlay"></div>
+          <div class="drink-info">
+            <h3>Knuckles</h3>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Drink 6 -->
+    <div class="drink-card mat-elevation-z4">
+      <a href="https://www.ceylonbeverage.com/" target="_blank" class="drink-link">
+        <div class="drink-image" style="background-image: url('ceylonbeverage.png');">
+          <div class="drink-overlay"></div>
+          <div class="drink-info">
+            <h3>Ceylon Beverage</h3>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Chat Button -->
+  <div class="chat-button">
+    <button mat-fab color="primary" aria-label="Chat" [routerLink]="['/chat']">
+      <mat-icon>chat</mat-icon>
+    </button>
+  </div>
+</div>

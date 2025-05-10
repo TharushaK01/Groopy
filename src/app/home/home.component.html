@@ -1,4 +1,4 @@
- <div class="green-rectangle p-3" style="margin: 50px;">
+ <!-- <div class="green-rectangle p-3" style="margin: 50px;">
     <h3 class="text-center book">Book Anything As a Group</h3>
     <div class="d-flex justify-content-center">
     <div class="input-group mb-3" style="max-width: 300px;">
@@ -23,6 +23,7 @@
         <button routerLink="/trip" class="btn btn-primary" style="width: 215px; height: 215px;">Trip</button>
       </div>
     </div>
+  <div class=""></div>
     <div class="card mb-2" style="width: 250px; height: 250px; margin-right: 15px;">
       <div class="card-body">
         <button routerLink="/music" class="btn btn-primary" style="width: 215px; height: 215px;">Music</button>
@@ -30,9 +31,64 @@
     </div>
   </div>
   <div class="chat">
-<button routerLink="/chat" >chat</button>
+<button routerLink="/chat" class="btn btn-primary" >chat</button>
   </div>
       
   
         
+         -->
+         <div class="group-booking-container">
+          <!-- Header Section -->
+          <div class="booking-header mat-elevation-z4">
+            <h2 class="booking-title">Book Anything As a Group</h2>
+            <p class="booking-subtitle">Save money by booking together with friends</p>
+            
+            <div class="search-container">
+              <mat-form-field appearance="outline" class="search-input">
+                <mat-label>Search for group activities</mat-label>
+                <input matInput placeholder="Search weddings, trips, music events...">
+                <mat-icon matPrefix>search</mat-icon>
+                <button mat-icon-button matSuffix aria-label="Search" class="search-button">
+                  <mat-icon>search</mat-icon>
+                </button>
+              </mat-form-field>
+            </div>
+          </div>
         
+          <!-- Categories Grid -->
+          <div class="categories-grid">
+            <!-- Wedding Card -->
+            <div class="category-card mat-elevation-z4" routerLink="/wedding">
+              <div class="category-icon wedding-icon">
+                <mat-icon>favorite</mat-icon>
+              </div>
+              <h3 class="category-title">Wedding</h3>
+              <p class="category-description">Plan your perfect day together</p>
+            </div>
+        
+            <!-- Trip Card -->
+            <div class="category-card mat-elevation-z4" routerLink="/trip">
+              <div class="category-icon trip-icon">
+                <mat-icon>flight</mat-icon>
+              </div>
+              <h3 class="category-title">Trip</h3>
+              <p class="category-description">Group travel adventures</p>
+            </div>
+        
+            <!-- Music Card -->
+            <div class="category-card mat-elevation-z4" routerLink="/music">
+              <div class="category-icon music-icon">
+                <mat-icon>music_note</mat-icon>
+              </div>
+              <h3 class="category-title">Music</h3>
+              <p class="category-description">Concerts & events</p>
+            </div>
+          </div>
+        
+          <!-- Chat Button -->
+          <div class="chat-button">
+            <button routerLink="/chat" mat-fab color="primary" aria-label="Chat">
+              <mat-icon>chat</mat-icon>
+            </button>
+          </div>
+        </div>

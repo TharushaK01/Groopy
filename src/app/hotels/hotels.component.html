@@ -1,129 +1,106 @@
-<div class="p-3" style="margin: 50px;">
-    <h3 class="Wedding text-center">Hotels</h3>
-  </div>
-  <div class="d-flex justify-content-center">
-    <div class="input-group mb-3" style="max-width: 300px;">
-      <input type="text" class="form-control" placeholder="Enter your search" aria-label="Search">
-      <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button">
-          <i class="bi bi-search">Search</i>
+<div class="hotels-container">
+  <!-- Header Section -->
+  <div class="hotels-header mat-elevation-z4">
+    <h2 class="hotels-title">Discover Amazing Hotels</h2>
+    <p class="hotels-subtitle">Find the perfect accommodation for your group</p>
+    
+    <div class="search-container">
+      <mat-form-field appearance="outline" class="search-input">
+        <mat-label>Search hotels by name or location</mat-label>
+        <input matInput placeholder="e.g. Colombo, beach resorts...">
+        <mat-icon matPrefix>search</mat-icon>
+        <button mat-icon-button matSuffix aria-label="Search" class="search-button">
+          <mat-icon>search</mat-icon>
         </button>
-      </div>
+      </mat-form-field>
     </div>
   </div>
-  
-  <div class="mb-2">
-      <div class="d-flex flex-row mb-2 justify-content-center" >
-        <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-            <div class="card-body">
-                <a href="https://www.cinnamonhotels.com/?gad_source=1&gclid=CjwKCAiAnpy9BhAkEiwA-P8N4sFmJL9jMzN4DPXc3h6OWfi6G6dc7b5UBNwdQpjmzsC7di7GaIyUTBoCo5MQAvD_BwE&gclsrc=aw.ds" target="_blank" style="text-decoration: none;">
-                <button class="btn btn-primary position-relative overflow-hidden" 
-                        style="width: 215px; height: 215px; display: flex; align-items: center; justify-content: center; text-align: center;">
-                  <!-- Image inside the button -->
-                  <img src="Cinnaman lodge.jpg" alt="Cinnamon Lodge" 
-                       style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.5;">
-                  
-                  <!-- Text container -->
-                  <div style="position: relative; z-index: 1; color: white; font-weight: bold;">
-                    <span style="display: block; font-size: 18px;">Cinnamon Lodge</span>
-                    <span style="display: block; font-size: 14px;">- Habarana</span>
-                  </div>
-                </button>
-                </a>
-              </div>
-      </div>
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-            <a href="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=KDWYAHI&arrivalDate=2025-02-09&departureDate=2025-02-10&room1NumAdults=1&WT.mc_id=zLADA0LK1HI2PSH3GGL4INTBPP5dkt6KDWYAHI7en_&epid%21_=&ebuy%21=&gad_source=1&gclid=CjwKCAiAnpy9BhAkEiwA-P8N4vmJUiO9QAODAkINLziK21FUE12Jk9XN7L7xVXZBzXWHIedLCdVmYxoC5PEQAvD_BwE&gclsrc=aw.ds" target="_blank" style="text-decoration: none;">
-            <button class="btn btn-primary position-relative overflow-hidden" 
-                    style="width: 215px; height: 215px; display: flex; align-items: center; justify-content: center; text-align: center;">
-              <!-- Image inside the button -->
-              <img src="Hilton Yala Resort.jpg" alt="Hilton Yala Resort" 
-                   style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.5;">
-              
-              <!-- Text container -->
-              <div style="position: relative; z-index: 1; color: white; font-weight: bold;">
-                <span style="display: block; font-size: 18px;">Hilton Yala Resort</span>
-                <span style="display: block; font-size: 14px;">- Yala</span>
-              </div>
-            </button>
-        </a>
+
+  <!-- Hotels Grid -->
+  <div class="hotels-grid">
+    <!-- Hotel 1 -->
+    <div class="hotel-card mat-elevation-z4">
+      <a href="https://www.cinnamonhotels.com/" target="_blank" class="hotel-link">
+        <div class="hotel-image" style="background-image: url('Cinnaman lodge.jpg');">
+          <div class="hotel-overlay"></div>
+          <div class="hotel-info">
+            <h3>Cinnamon Lodge</h3>
+            <p>Habarana</p>
           </div>
-      </div>
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-            <a href="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=KDWYAHI&arrivalDate=2025-02-09&departureDate=2025-02-10&room1NumAdults=1&WT.mc_id=zLADA0LK1HI2PSH3GGL4INTBPP5dkt6KDWYAHI7en_&epid%21_=&ebuy%21=&gad_source=1&gclid=CjwKCAiAnpy9BhAkEiwA-P8N4vmJUiO9QAODAkINLziK21FUE12Jk9XN7L7xVXZBzXWHIedLCdVmYxoC5PEQAvD_BwE&gclsrc=aw.ds" target="_blank" style="text-decoration: none;">
-            <button class="btn btn-primary position-relative overflow-hidden" 
-                    style="width: 215px; height: 215px; display: flex; align-items: center; justify-content: center; text-align: center;">
-              <!-- Image inside the button -->
-              <img src="Hidde Inn Unawatuna.jpg" alt="Hidde Inn Unawatuna" 
-                   style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.5;">
-              
-              <!-- Text container -->
-              <div style="position: relative; z-index: 1; color: white; font-weight: bold;">
-                <span style="display: block; font-size: 18px;">Hidde Inn Unawatuna</span>
-                <span style="display: block; font-size: 14px;">- Unawatuna</span>
-              </div>
-            </button>
-        </a>
-          </div>
-      </div>
-      </div>
-      
-    <div class="d-flex flex-row mb-2 justify-content-center">
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-            <a href="https://www.themacollection.com/aliya-resort/special-offers/" target="_blank" style="text-decoration: none;">
-            <button class="btn btn-primary position-relative overflow-hidden" 
-                    style="width: 215px; height: 215px; display: flex; align-items: center; justify-content: center; text-align: center;">
-              <!-- Image inside the button -->
-              <img src="Aliya Resort and Spa.jpg" alt="Aliya Resort and Spa" 
-                   style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.5;">
-              
-              <!-- Text container -->
-              <div style="position: relative; z-index: 1; color: white; font-weight: bold;">
-                <span style="display: block; font-size: 18px;">Aliya Resort and Spa</span>
-                <span style="display: block; font-size: 14px;">- Sigiriya</span>
-              </div>
-            </button>
-        </a>
-          </div>
-      </div>
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-            <a href="https://www.sigiriyajungles.com/special-offers.html" target="_blank" style="text-decoration: none;">
-            <button class="btn btn-primary position-relative overflow-hidden" 
-                    style="width: 215px; height: 215px; display: flex; align-items: center; justify-content: center; text-align: center;">
-              <!-- Image inside the button -->
-              <img src="Sigiriya Jungles.jpg" alt="Sigiriya Jungles" 
-                   style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.5;">
-              
-              <!-- Text container -->
-              <div style="position: relative; z-index: 1; color: white; font-weight: bold;">
-                <span style="display: block; font-size: 18px;">Sigiriya Jungles</span>
-                <span style="display: block; font-size: 14px;">- Sigiriya</span>
-              </div>
-            </button>
-        </a>
-          </div>
-      </div>
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-            <a href="https://www.deerparksrilanka.com/booking/" target="_blank" style="text-decoration: none;">
-            <button class="btn btn-primary position-relative overflow-hidden" 
-                    style="width: 215px; height: 215px; display: flex; align-items: center; justify-content: center; text-align: center;">
-              <!-- Image inside the button -->
-              <img src="Deer Park Hotel.jpg" alt="Deer Park Hotel" 
-                   style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.5;">
-              
-              <!-- Text container -->
-              <div style="position: relative; z-index: 1; color: white; font-weight: bold;">
-                <span style="display: block; font-size: 18px;">Deer Park Hotel</span>
-                <span style="display: block; font-size: 14px;">- Giritale</span>
-              </div>
-            </button>
-        </a>
-          </div>
-      </div>
+        </div>
+      </a>
     </div>
+
+    <!-- Hotel 2 -->
+    <div class="hotel-card mat-elevation-z4">
+      <a href="https://www.hilton.com/" target="_blank" class="hotel-link">
+        <div class="hotel-image" style="background-image: url('Hilton Yala Resort.jpg');">
+          <div class="hotel-overlay"></div>
+          <div class="hotel-info">
+            <h3>Hilton Yala Resort</h3>
+            <p>Yala</p>
+          </div>
+        </div>
+      </a>
     </div>
+
+    <!-- Hotel 3 -->
+    <div class="hotel-card mat-elevation-z4">
+      <a href="https://www.hilton.com/" target="_blank" class="hotel-link">
+        <div class="hotel-image" style="background-image: url('Hidde Inn Unawatuna.jpg');">
+          <div class="hotel-overlay"></div>
+          <div class="hotel-info">
+            <h3>Hidde Inn Unawatuna</h3>
+            <p>Unawatuna</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Hotel 4 -->
+    <div class="hotel-card mat-elevation-z4">
+      <a href="https://www.themacollection.com/" target="_blank" class="hotel-link">
+        <div class="hotel-image" style="background-image: url('Aliya Resort and Spa.jpg');">
+          <div class="hotel-overlay"></div>
+          <div class="hotel-info">
+            <h3>Aliya Resort and Spa</h3>
+            <p>Sigiriya</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Hotel 5 -->
+    <div class="hotel-card mat-elevation-z4">
+      <a href="https://www.sigiriyajungles.com/" target="_blank" class="hotel-link">
+        <div class="hotel-image" style="background-image: url('Sigiriya Jungles.jpg');">
+          <div class="hotel-overlay"></div>
+          <div class="hotel-info">
+            <h3>Sigiriya Jungles</h3>
+            <p>Sigiriya</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Hotel 6 -->
+    <div class="hotel-card mat-elevation-z4">
+      <a href="https://www.deerparksrilanka.com/" target="_blank" class="hotel-link">
+        <div class="hotel-image" style="background-image: url('Deer Park Hotel.jpg');">
+          <div class="hotel-overlay"></div>
+          <div class="hotel-info">
+            <h3>Deer Park Hotel</h3>
+            <p>Giritale</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Chat Button -->
+  <div class="chat-button">
+    <button routerLink="/chat" mat-fab color="primary" aria-label="Chat">
+      <mat-icon>chat</mat-icon>
+    </button>
+  </div>
+</div>

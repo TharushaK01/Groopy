@@ -1,1 +1,163 @@
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
+// /* Button hover effects */
+// .btn {
+//   transition: all 0.3s ease;
+// }
+
+// .btn:hover {
+//   transform: translateY(-3px);
+//   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+//   opacity: 0.9;
+// }
+
+// /* Search button specific hover */
+// .input-group-append .btn:hover {
+//   background-color: #7a6ba8 !important;
+//   border-color: #7a6ba8 !important;
+// }
+
+// /* Card hover effect */
+// .card:hover {
+//   transform: translateY(-5px);
+//   transition: all 0.3s ease;
+// }
+.group-booking-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+  }
+  
+  .booking-header {
+    background-color: #03A791;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: white;
+  }
+  
+  .booking-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .booking-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+  }
+  
+  .search-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-input {
+    width: 100%;
+    max-width: 500px;
+    
+    .mat-form-field-outline {
+      background-color: white;
+      border-radius: 8px;
+    }
+  }
+  
+  .search-button {
+    color: #03A791;
+  }
+  
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 12px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+  }
+  
+  .category-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    
+    mat-icon {
+      font-size: 40px;
+      width: 40px;
+      height: 40px;
+      color: white;
+    }
+  }
+  
+  .wedding-icon {
+    background-color: #F7374F;
+  }
+  
+  .trip-icon {
+    background-color: #006A71;
+  }
+  
+  .music-icon {
+    background-color: #4F1C51;
+  }
+  
+  .category-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .category-description {
+    color: #666;
+    margin: 0;
+  }
+  
+  .chat-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    
+    button {
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: scale(1.1) rotate(10deg);
+      }
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .categories-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .booking-title {
+      font-size: 1.8rem;
+    }
+  }

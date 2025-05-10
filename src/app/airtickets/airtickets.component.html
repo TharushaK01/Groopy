@@ -1,130 +1,100 @@
-<div class="p-3" style="margin: 50px;">
-    <h3 class="Wedding text-center">Air Tickets</h3>
-  </div>
-  <div class="d-flex justify-content-center">
-    <div class="input-group mb-3" style="max-width: 300px;">
-      <input type="text" class="form-control" placeholder="Enter your search" aria-label="Search">
-      <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button">
-          <i class="bi bi-search">Search</i>
+<div class="air-tickets-container">
+  <!-- Header Section -->
+  <div class="air-tickets-header mat-elevation-z4">
+    <h2 class="air-tickets-title">Discover Air Tickets</h2>
+    <p class="air-tickets-subtitle">Find the best flights for your trip</p>
+    
+    <div class="search-container">
+      <mat-form-field appearance="outline" class="search-input">
+        <mat-label>Search flights by airline or destination</mat-label>
+        <input matInput placeholder="e.g. Etihad, Skyscanner...">
+        <mat-icon matPrefix>search</mat-icon>
+        <button mat-icon-button matSuffix aria-label="Search" class="search-button">
+          <mat-icon>search</mat-icon>
         </button>
-      </div>
+      </mat-form-field>
     </div>
   </div>
-  
-  <div class="mb-2">
-      <div class="d-flex flex-row mb-2 justify-content-center" >
-        <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-            <div class="card-body">
-                <a href="https://www.etihad.com/en-lk/flights/flights-from-colombo-to-mahe?utm_medium=ppc&utm_source=google:na&utm_campaign=always_on:na:na:na&utm_term=na:na:na:na:na&utm_content=na:na:lk:na:na:na:na:na&&&&&gad_source=1&gclid=CjwKCAiAzvC9BhADEiwAEhtlN3DedtguVtJWJQtw8A35NT_n8evbUFvXbUpsZhDmZIYtG98CWEXNeRoCUBwQAvD_BwE&gclsrc=aw.ds" target="_blank" style="text-decoration: none;">
-                <button class="btn btn-primary position-relative overflow-hidden" 
-                        style="width: 215px; height: 215px; display: flex; align-items: center; justify-content: center; text-align: center;">
-                  <!-- Image inside the button -->
-                  <img src="etihad.png" alt="Cinnamon Lodge" 
-                       style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.5;">
-                  
-                  <!-- Text container -->
-                  <div style="position: relative; z-index: 1; color: white; font-weight: bold;">
-                    <span style="display: block; font-size: 18px;">Etihad</span>
-                    
-                  </div>
-                </button>
-                </a>
-              </div>
-      </div>
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-            <a href="https://www.srilankan.com/en_uk/go?gad_source=1&gclid=CjwKCAiAzvC9BhADEiwAEhtlN3BecTAcamBOR_e2a849HunZobT8bgEGKbVKnKhEIBK8Yi__sLcNEhoCT-MQAvD_BwE" target="_blank" style="text-decoration: none;">
-            <button class="btn btn-primary position-relative overflow-hidden" 
-                    style="width: 215px; height: 215px; display: flex; align-items: center; justify-content: center; text-align: center;">
-              <!-- Image inside the button -->
-              <img src="Sri Lankan Airlines.png" alt="Hilton Yala Resort" 
-                   style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.5;">
-              
-              <!-- Text container -->
-              <div style="position: relative; z-index: 1; color: white; font-weight: bold;">
-                <span style="display: block; font-size: 18px;">Sri Lankan Airlines</span>
-                
-              </div>
-            </button>
-        </a>
+
+  <!-- Air Tickets Grid -->
+  <div class="air-tickets-grid">
+    <!-- Air Ticket 1 -->
+    <div class="air-ticket-card mat-elevation-z4">
+      <a href="https://www.etihad.com/en-lk/flights/flights-from-colombo-to-mahe?utm_medium=ppc&utm_source=google:na&utm_campaign=always_on:na:na:na&utm_term=na:na:na:na:na&utm_content=na:na:lk:na:na:na:na:na&&&&&gad_source=1&gclid=CjwKCAiAzvC9BhADEiwAEhtlN3DedtguVtJWJQtw8A35NT_n8evbUFvXbUpsZhDmZIYtG98CWEXNeRoCUBwQAvD_BwE&gclsrc=aw.ds" target="_blank" class="air-ticket-link">
+        <div class="air-ticket-image" style="background-image: url('etihad.png');">
+          <div class="air-ticket-overlay"></div>
+          <div class="air-ticket-info">
+            <h3>Etihad</h3>
           </div>
-      </div>
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-            <a href="https://www.skyscanner.net/flights-from/lk/cheap-flights-from-sri-lanka.html?&utm_source=google&utm_medium=cpc&utm_campaign=XY-Flights-Search-EN-DSA&utm_term=DYNAMIC+SEARCH+ADS&associateID=SEM_FLI_19465_00000&campaign_id=12562759432&adgroupid=127313563670&keyword_id=dsa-482473746848&gad_source=1&gclid=CjwKCAiAzvC9BhADEiwAEhtlN9JFzmdglfNy-kNswqc0BaHcqJY2m36tVfprsKhW9DBdaV6xAxlXtxoCwI4QAvD_BwE&gclsrc=aw.ds" target="_blank" style="text-decoration: none;">
-            <button class="btn btn-primary position-relative overflow-hidden" 
-                    style="width: 215px; height: 215px; display: flex; align-items: center; justify-content: center; text-align: center;">
-              <!-- Image inside the button -->
-              <img src="skyscanner.png" alt="Hidde Inn Unawatuna" 
-                   style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.5;">
-              
-              <!-- Text container -->
-              <div style="position: relative; z-index: 1; color: white; font-weight: bold;">
-                <span style="display: block; font-size: 18px;">Skyscanner</span>
-                
-              </div>
-            </button>
-        </a>
-          </div>
-      </div>
-      </div>
-      
-    <div class="d-flex flex-row mb-2 justify-content-center">
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-            <a href="https://fitsair.com/?gad_source=1&gclid=CjwKCAiAzvC9BhADEiwAEhtlNwiAheDT1mFw3vg9h4EXeGchozWy1TaM5NgWCisi7CzsT4lCbaguvBoCSAYQAvD_BwE" target="_blank" style="text-decoration: none;">
-            <button class="btn btn-primary position-relative overflow-hidden" 
-                    style="width: 215px; height: 215px; display: flex; align-items: center; justify-content: center; text-align: center;">
-              <!-- Image inside the button -->
-              <img src="firstair.jpg" alt="Aliya Resort and Spa" 
-                   style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.5;">
-              
-              <!-- Text container -->
-              <div style="position: relative; z-index: 1; color: white; font-weight: bold;">
-                <span style="display: block; font-size: 18px;">FirstAir</span>
-             
-              </div>
-            </button>
-        </a>
-          </div>
-      </div>
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-            <a href="https://www.findmyfare.com/" target="_blank" style="text-decoration: none;">
-            <button class="btn btn-primary position-relative overflow-hidden" 
-                    style="width: 215px; height: 215px; display: flex; align-items: center; justify-content: center; text-align: center;">
-              <!-- Image inside the button -->
-              <img src="findmyfare.png" alt="Sigiriya Jungles" 
-                   style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.5;">
-              
-              <!-- Text container -->
-              <div style="position: relative; z-index: 1; color: white; font-weight: bold;">
-                <span style="display: block; font-size: 18px;">Find My Fare </span>
-     
-              </div>
-            </button>
-        </a>
-          </div>
-      </div>
-      <div class="card" style="width: 250px; height: 250px; margin-right: 15px;">
-        <div class="card-body">
-            <a href="https://www.emirates.com/lk/english/book/" target="_blank" style="text-decoration: none;">
-            <button class="btn btn-primary position-relative overflow-hidden" 
-                    style="width: 215px; height: 215px; display: flex; align-items: center; justify-content: center; text-align: center;">
-              <!-- Image inside the button -->
-              <img src="emirates.png" alt="Deer Park Hotel" 
-                   style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.5;">
-              
-              <!-- Text container -->
-              <div style="position: relative; z-index: 1; color: white; font-weight: bold;">
-                <span style="display: block; font-size: 18px;">Emirates</span>
-                
-              </div>
-            </button>
-        </a>
-          </div>
-      </div>
-    </div>
+        </div>
+      </a>
     </div>
 
+    <!-- Air Ticket 2 -->
+    <div class="air-ticket-card mat-elevation-z4">
+      <a href="https://www.srilankan.com/en_uk/go?gad_source=1&gclid=CjwKCAiAzvC9BhADEiwAEhtlN3BecTAcamBOR_e2a849HunZobT8bgEGKbVKnKhEIBK8Yi__sLcNEhoCT-MQAvD_BwE" target="_blank" class="air-ticket-link">
+        <div class="air-ticket-image" style="background-image: url('Sri Lankan Airlines.png');">
+          <div class="air-ticket-overlay"></div>
+          <div class="air-ticket-info">
+            <h3>Sri Lankan Airlines</h3>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Air Ticket 3 -->
+    <div class="air-ticket-card mat-elevation-z4">
+      <a href="https://www.skyscanner.net/flights-from/lk/cheap-flights-from-sri-lanka.html?&utm_source=google&utm_medium=cpc&utm_campaign=XY-Flights-Search-EN-DSA&utm_term=DYNAMIC+SEARCH+ADS&associateID=SEM_FLI_19465_00000&campaign_id=12562759432&adgroupid=127313563670&keyword_id=dsa-482473746848&gad_source=1&gclid=CjwKCAiAzvC9BhADEiwAEhtlN9JFzmdglfNy-kNswqc0BaHcqJY2m36tVfprsKhW9DBdaV6xAxlXtxoCwI4QAvD_BwE&gclsrc=aw.ds" target="_blank" class="air-ticket-link">
+        <div class="air-ticket-image" style="background-image: url('skyscanner.png');">
+          <div class="air-ticket-overlay"></div>
+          <div class="air-ticket-info">
+            <h3>Skyscanner</h3>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Air Ticket 4 -->
+    <div class="air-ticket-card mat-elevation-z4">
+      <a href="https://fitsair.com/?gad_source=1&gclid=CjwKCAiAzvC9BhADEiwAEhtlNwiAheDT1mFw3vg9h4EXeGchozWy1TaM5NgWCisi7CzsT4lCbaguvBoCSAYQAvD_BwE" target="_blank" class="air-ticket-link">
+        <div class="air-ticket-image" style="background-image: url('firstair.jpg');">
+          <div class="air-ticket-overlay"></div>
+          <div class="air-ticket-info">
+            <h3>FirstAir</h3>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Air Ticket 5 -->
+    <div class="air-ticket-card mat-elevation-z4">
+      <a href="https://www.findmyfare.com/" target="_blank" class="air-ticket-link">
+        <div class="air-ticket-image" style="background-image: url('findmyfare.png');">
+          <div class="air-ticket-overlay"></div>
+          <div class="air-ticket-info">
+            <h3>Find My Fare</h3>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Air Ticket 6 -->
+    <div class="air-ticket-card mat-elevation-z4">
+      <a href="https://www.emirates.com/lk/english/book/" target="_blank" class="air-ticket-link">
+        <div class="air-ticket-image" style="background-image: url('emirates.png');">
+          <div class="air-ticket-overlay"></div>
+          <div class="air-ticket-info">
+            <h3>Emirates</h3>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Chat Button -->
+  <div class="chat-button">
+    <button mat-fab color="primary" aria-label="Chat" [routerLink]="['/chat']">
+      <mat-icon>chat</mat-icon>
+    </button>
+  </div>
+</div>

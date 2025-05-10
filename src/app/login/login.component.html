@@ -1,4 +1,4 @@
-<div class="container mat-elevation-z5">
+<!-- <div class="container mat-elevation-z5">
     <h1  style="text-align: center;">Login</h1>
     <form [formGroup]="loginform" (ngSubmit)="submit()">
         <mat-form-field>
@@ -14,5 +14,50 @@
         <button  mat-raised-button color="parimary" type="submit"> Login</button>
         </div>
         <span class="center margin-top">New to our platform?<a class="sign-up-link" routerLink="/signup">Sin Up!</a></span>
+    </form>
+</div> -->
+
+<div class="login-container mat-elevation-z8">
+    <div class="login-header">
+        <h1 class="login-title">Welcome Back</h1>
+        <p class="login-subtitle">Please login to your account</p>
+    </div>
+    
+    <form [formGroup]="loginform" (ngSubmit)="submit()" class="login-form">
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Email Address</mat-label>
+            <input matInput placeholder="your@email.com" formControlName="email"/>
+            <mat-icon matPrefix>mail_outline</mat-icon>
+            <mat-error *ngIf="email?.errors?.['required']">Email is required</mat-error>
+            <mat-error *ngIf="email?.errors?.['email']">Please enter a valid email</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password" 
+                   [type]="hidePassword ? 'password' : 'text'"/>
+            <mat-icon matPrefix>lock_outline</mat-icon>
+            <button type="button" mat-icon-button matSuffix 
+                    (click)="hidePassword = !hidePassword"
+                    [attr.aria-label]="'Hide password'" 
+                    [attr.aria-pressed]="hidePassword">
+                <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error *ngIf="password?.errors?.['required']">Password is required</mat-error>
+        </mat-form-field>
+
+        <div class="forgot-password">
+            <a routerLink="/forgot-password" class="text-link">Forgot password?</a>
+        </div>
+
+        <button mat-raised-button color="primary" type="submit" class="login-button">
+            Login
+            <mat-icon>arrow_forward</mat-icon>
+        </button>
+
+        <div class="signup-link">
+            New to our platform? 
+            <a routerLink="/signup" class="text-link">Create an account</a>
+        </div>
     </form>
 </div>
