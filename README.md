@@ -5,3 +5,7 @@ Here’s the Link of Prototype: https://www.figma.com/proto/diVXImQvfMgx771743Ky
 ## 🔗 Live Demo (Still Developing)
 https://github.com/user-attachments/assets/7d134e46-067f-4b63-916c-78a26c80bfc8
 
+https://github.com/user-attachments/assets/58b53990-2e58-4547-ae9b-f00187b1ae66
+
+
+
